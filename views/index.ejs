@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+        body {
+            height: auto;
+        }
+
+        .header {
+            height: 750px;
+            background-size: fixed;
+            background-position: center;
+            background-attachment: fixed;
+            padding-top: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .top-navbar {
+            position: relative;
+            z-index: 10;
+        }
+
+        .top-navbar .navbar {
+            padding: 15px 0px;
+            position: fixed;
+            width: 100%;
+            border-radius: 0px 0px 100px 100px;
+            transition: height .3s ease-out, background .3s ease-out, box-shadow .3s ease-out;
+            -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
+            -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+            z-index: 100;
+        }
+
+        .top-navbar .navbar-light .navbar-nav .nav-link {
+            color: #010101;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover {
+            background: #d65106;
+            color: #ffffff;
+        }
+
+        .top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link {
+            background: #d65106;
+            color: #ffffff;
+            border-radius: 4px;
+        }
+
+        .navbar-expand-lg .navbar-nav .dropdown-menu {
+            border: none;
+            border-radius: 0px;
+            padding: 10px;
+            box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar-expand-lg .navbar-nav .dropdown-menu a {
+            padding: 10px 10px;
+            text-transform: uppercase;
+        }
+
+        .navbar-expand-lg .navbar-nav .dropdown-menu a.dropdown-item:hover {
+            background: #d65106;
+            color: #ffffff;
+        }
+
+        .navbar-light .navbar-toggler:hover {
+            background: #d65106;
+        }
+
+        .navbar1 {
+            width: 100px;
+            height: 66px;
+        }
+
+        .navbar2 {
+            margin-left: 35%;
+        }
+
+        .input-group {
+            width: 90%;
+            /* border-top: ;
+            height: 50%; */
+            max-width: 500px;
+            border-radius: 50px;
+            background-color: white;
+            margin: auto;
+            padding: 2px;
+            z-index: 1;
+        }
+
+        .form-control {
+            border: 0 !important;
+            border-radius: 30px !important;
+            margin: 2px;
+            box-shadow: none !important;
+        }
+
+        .input-group-text {
+            width: 100px;
+            background-image: linear-gradient(#00ff7e, #1f3d90);
+            border: 0 !important;
+            color: white !important;
+            padding: 0 25px !important;
+            border-radius: 30px !important;
+            box-shadow: none !important;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header class="top-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Capturefgf.PNG"
+                        class="navbar1" alt="">
+                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Capture.PNG"
+                        class="navbar2" alt="">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food"
+                    aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbars-rs-food">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="index.ejs">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.ejs">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/login">Log in</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/register">Sign up</a></li>
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+    <section class="header"
+        style="background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/slide_2.jpg')">
+        <div class="input-group">
+            <form action="">
+            <input type="text" class="form-control" placeholder="
+                Search your city or Country">
+            <button type="submit" class="input-group-text btn">Search</button>
+        </form>
+        </div>
+    </section>
+</body>
+
+</html>
