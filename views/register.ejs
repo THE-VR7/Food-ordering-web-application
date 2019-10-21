@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="bootstrap.css">
+    <title>Sign Up form</title>
+    <style>
+        * {
+
+            padding: 0px;
+
+            margin: 0px;
+
+        }
+
+        body {
+            background-image: url(https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/60604.jpg);
+            background-size: cover;
+            font-family: sans-serif;
+            background-repeat: no-repeat;
+        }
+
+        .box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            padding: 40px;
+            background-image: url(https://images.pexels.com/photos/1227520/pexels-photo-1227520.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500);
+            background-size: cover;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            text-align: center;
+            margin: 0 0 30px;
+            padding: 0px;
+            color: white;
+        }
+
+        .box .inputbox {
+            position: relative;
+        }
+
+        .box .inputbox input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: black;
+            margin-bottom: 10px;
+            border: none;
+            outline: none;
+            background: transparent;
+            border-bottom: 1px solid white;
+        }
+
+        .box .inputbox label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: white;
+            padding: 10px 0;
+            font-size: 16px;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .box .inputbox input:focus~label,
+        .box .inputbox input:valid~label {
+            top: -16px;
+            left: 0;
+            color: deepskyblue;
+            font-size: 12px;
+        }
+
+        .box button[type="submit"] {
+            margin-top: 10px;
+            margin-left: 35%;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: white;
+            background: deepskyblue;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h2>Register Yourself</h2>
+        <form method="POST" action="/register">
+            <div class="inputbox">
+                <input type="text" name="name" required>
+                <label>Enter Your Name</label>
+            </div>
+            <div class="inputbox">
+                <input type="email" name="_id" required>
+                <label>Email</label>
+            </div>
+            <div class="inputbox">
+                <input type="username" name="username" required>
+                <label>Username</label>
+            </div>
+            <div class="inputbox">
+                <input type="password" name="password" required>
+                <label>Enter Password</label>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+</body>
+
+</html>
