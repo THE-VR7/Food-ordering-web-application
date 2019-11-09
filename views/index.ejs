@@ -8,6 +8,36 @@
     <title>Document</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script>
+        onload = start;
+        function start() {
+            var im1 = "linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/banner12.jpg')"
+            var im2 = "linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/img3.jpg')"
+            var im3 = "linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/img2.jpg')"
+            var im4 = "linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/img-5.jpg')"
+            var im5 = "linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/img-4.jpg')"
+            var i = 0;
+            function Move() {
+                i = (i % 5) + 1; // 5 is the Number of image in slider
+                if (i == 1) {
+                    document.getElementById('img').style.backgroundImage = im1
+                }
+                else if (i == 2) {
+                    document.getElementById('img').style.backgroundImage = im2
+                }
+                else if (i == 3) {
+                    document.getElementById('img').style.backgroundImage = im3
+                }
+                else if (i == 4) {
+                    document.getElementById('img').style.backgroundImage = im4
+                }
+                else {
+                    document.getElementById('img').style.backgroundImage = im5
+                }
+            }
+            setInterval(Move, 2000); //change img in 2 sec
+        }
+    </script>
     <style>
         body {
             height: auto;
@@ -21,6 +51,18 @@
             padding-top: 20px;
             text-align: center;
             color: white;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes header {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
         }
 
         .top-navbar {
@@ -34,9 +76,7 @@
             width: 100%;
             border-radius: 0px 0px 100px 100px;
             transition: height .3s ease-out, background .3s ease-out, box-shadow .3s ease-out;
-            -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
-            -webkit-box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
             box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
             z-index: 100;
         }
@@ -119,6 +159,116 @@
             box-shadow: none !important;
 
         }
+
+        .feedback {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('http://getwallpapers.com/wallpaper/full/3/6/f/1289761-popular-farm-wallpaper-1920x1080-images.jpg#.XZ4vxGOkrlU.link');
+            padding-top: 85px;
+            background-attachment: fixed;
+            padding: 100px 0;
+        }
+
+        .h1h1 {
+            font-family: cursive;
+            font-weight: 300;
+            font-size: 60px;
+            color: white;
+            padding-left: 160px;
+        }
+
+        .h4h4 {
+            font-family: cursive;
+            font-weight: 400;
+            font-size: 20px;
+            color: white;
+            line-height: 1.5;
+            padding-left: 450px;
+        }
+
+
+        input:focus~label,
+        textarea:focus~label,
+        input:valid~label,
+        textarea:valid~label {
+            font-size: 0.75em;
+            color: gray;
+            top: -5px;
+            -webkit-transition: all 0.225s ease;
+            transition: all 0.225s ease;
+        }
+
+        .styled-input {
+            float: left;
+            width: 293px;
+            margin: 1rem 0;
+            position: relative;
+            border-radius: 4px;
+        }
+        @media only screen and (max-width: 768px){
+    .styled-input {
+        width:100%;
+    }
+}
+
+.styled-input label {
+    color: #999;
+    padding: 1.3rem 30px 1rem 30px;
+    position: absolute;
+    top: 10px;
+    left: 0;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease;
+    pointer-events: none;
+}
+
+.styled-input.wide { 
+    width: 650px;
+    max-width: 100%;
+}
+
+input,
+textarea {
+    padding: 30px;
+    border: 0;
+    width: 100%;
+    font-size: 1rem;
+    background-color:white;
+    color: black;
+    border-radius: 4px;
+}
+
+input:focus,
+textarea:focus { outline: 0; }
+
+input:focus ~ span,
+textarea:focus ~ span {
+    width: 100%;
+    -webkit-transition: all 0.075s ease;
+    transition: all 0.075s ease;
+}
+
+textarea {
+    width: 100%;
+    min-height: 15em;
+}
+
+.input-container {
+    width: 650px;
+    max-width: 100%;
+    margin: 20px auto 25px auto;
+}
+
+.submit-btn {
+    width: 130px;
+            padding: 8px 0;
+            outline: none !important;
+            border: 2px solid white;
+            border-radius: 50px;
+            background: transparent;
+            color: white;
+            margin-top: 20px;
+            text-align: center;
+            margin-left: 520px;
+}
     </style>
 </head>
 
@@ -130,7 +280,7 @@
                     <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Capturefgf.PNG"
                         class="navbar1" alt="">
                     <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Capture.PNG"
-                        class="navbar2" alt="">
+                        class="navbar2" alt="" style="background: hidden;">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food"
                     aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
@@ -147,15 +297,58 @@
             </div>
         </nav>
     </header>
-    <section class="header"
+    <section class="header" id="img"
         style="background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/slide_2.jpg')">
         <div class="input-group">
             <form action="">
-            <input type="text" class="form-control" placeholder="
+                <input type="text" class="form-control" placeholder="
                 Search your city or Country">
-            <button type="submit" class="input-group-text btn">Search</button>
-        </form>
+                <button type="submit" class="input-group-text btn">Search</button>
+            </form>
         </div>
+    </section>
+    <section class="feedback">
+        <div class="container">
+            <div class="row">
+                <h1 class="h1h1">Share your problems with us</h1>
+            </div>
+            <div class="row">
+                <h4 class="h4h4" style="text-align:center">We'd love to hear from you!</h4>
+            </div>
+            <form method="POST" action="/">
+                <div class="row input-container">
+                    <div class="col-xs-12">
+                        <div class="styled-input wide">
+                            <input type="text" name="Name" required />
+                            <label>Name</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="styled-input">
+                            <input type="email" name="email" required />
+                            <label>Email</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="styled-input" style="float:right;">
+                            <input type="text" name="phonenumber" required />
+                            <label>Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="styled-input wide">
+                            <textarea name="text" required></textarea>
+                            <label>Message</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <button type="submit" class="btnmsg">Send message</butto>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
     </section>
 </body>
 
