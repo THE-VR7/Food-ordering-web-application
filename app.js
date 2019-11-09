@@ -13,19 +13,47 @@ const app = express();
 
 mongoose.connect("mongodb://localhost/food_app", function (err, db) {
     if (!(err)) console.log("you are connected to mongodb");
+    if(err) console.log('not connected to mongodb');
 });
 
-app.use(bodyParser.urlencoded({ extended: true }));
+var db=mongoose.connection; 
+db.on('error', console.log.bind(console, "connection error")); 
+db.once('open', function(callback){ 
+    console.log("connection succeeded"); 
+})
+
+mongoose.set('useNewUrlParser', true);
+mongoose.set('useUnifiedTopology', true);
 
 app.set('view engine', 'ejs');
 //
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(bodyParser.urlencoded({ extended: true }));
 // 
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
+app.post('/', function(req,res){ 
+    var Name = req.body.Name; 
+    var email =req.body.email; 
+    var phonenumber = req.body.phonenumber; 
+    var text =req.body.text;
+    var data = { 
+        "Name": Name, 
+        "email":email, 
+        "phonenumber":phonenumber, 
+        "text":text 
+    } 
+db.collection('details').insert(data,function(err, collection){ 
+        if (err) throw err; 
+        console.log("Record inserted Successfully");
+              
+    }); 
+          
+    return res.redirect('/'); 
+}) 
 
 app.get("/", function (req, res) {
     res.render("index");
