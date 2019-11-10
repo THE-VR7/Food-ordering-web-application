@@ -70,7 +70,7 @@
 
         .top-navbar {
             position: relative;
-            z-index: 10;
+            z-index: 170;
         }
 
         .top-navbar .navbar {
@@ -486,6 +486,183 @@
             text-align: center;
             margin-left: 520px;
         }
+        .anima1 {
+            width: 100%;
+            position: relative;
+            display: block;
+            height: 500px;
+           
+        }
+        .anima1 span {
+            font-size: 35px;
+            position: absolute;
+          
+            margin-left: 30%;
+            font-family: cursive;
+            padding-top: 35px;
+            color: #515151;
+            font-style: bold;
+            font-weight: 600;
+            animation: zm 3s;
+            animation-timing-function: linear;
+        }
+        @keyframes zm {
+            0% {
+                opacity: 0; 
+                transform:scale(0); 
+            }
+            50% {
+                opacity: 0.5; 
+                transform:scale(1.5);
+                }
+            100% { 
+                opacity: 1;
+                transform:scale(1); 
+                }
+        }
+        #st1 {
+            font-size: 30px;
+            position: absolute;
+            font-family: sans-serif;
+           
+            color: #E24425;
+            font-style: italic;
+            margin-top: 20px;
+            margin-left: 41%;
+            animation: zm 3s;
+            animation-timing-function: linear;
+        }
+        .lin1 {
+            position: absolute;
+            display: block;
+            margin-top: 45px;
+            margin-left: 270px;
+            width: 260px;
+            border-top: 2px dotted black;
+            animation: slideIn 2s forwards;
+            animation-timing-function: ease-out;
+        }
+        @keyframes slideIn { 
+            0% {
+            transform: translateX(-900px);
+            }
+            50% {
+                transform: translateX(50px);    
+            }
+            100% {
+            transform: translateX(0);
+        }
+        }
+        .lin2 {
+            width: 260px;
+            border-top: 2px dotted black;
+            color: green;
+            position: absolute;
+            margin-left: 950px;
+            margin-top: 45px;
+            animation: slideOut 2s forwards;
+            animation-timing-function: ease-out;
+        }
+        @keyframes slideOut { 
+            0% {
+                opacity: 0;
+            transform: translateX(900px);
+            }
+            50% {
+                transform: translateX(-50px);    
+            }
+            100% {
+            transform: translateX(0);
+        }
+        }
+        .imgs {
+          
+            width: 70%;
+            height: 250px;
+            margin: auto;
+            margin-top: 100px;
+
+        }
+        .imgs img {
+            
+            position: relative;
+            width: 190px;
+            height: 240px;
+            margin-top: 5px;
+            margin-left: 55px;
+        }
+        #one {
+            animation: first 2s;
+            animation-direction: alternate;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+        @keyframes first {
+            0% {
+                left: -70px;
+                opacity: 0;
+            }
+            100% { 
+                left: 20px; 
+                opacity: 1;
+            }
+        }
+        #one1 {
+            animation: first1 2s;
+            animation-direction: alternate;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+            opacity: 0;
+        }
+        @keyframes first1 {
+            0% {
+                left: -70px;
+                opacity: 0;
+            }
+            100% {
+                left: 20px; 
+                opacity: 1;
+            }
+        }
+        #one2 {
+            animation: first2 2s;
+            animation-direction: alternate;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            animation-delay: 2s;
+            opacity: 0;
+
+        }
+        @keyframes first2 {
+            0% {
+                left: -70px;
+                opacity: 0;
+            }
+            100% { 
+                left: 20px; 
+                opacity: 1;
+            }
+        }
+        #one3 {
+            animation: first3 2s;
+            animation-direction: alternate;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            animation-delay: 3s;
+            opacity: 0;
+
+        }
+        @keyframes first3 {
+            0% {
+                left: -70px;
+                opacity: 0;
+            }
+            100% { 
+                left: 20px; 
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 
@@ -537,6 +714,24 @@
             </form>
         </div>
     </section>
+    <div class="anima1">
+        <span>Ordering food was never  so easy</span>
+        <br><br><br>
+        <div class="lin1"></div>
+        <pre id="st1">Just 4 steps follow</pre>
+        <div class="lin2"></div>
+        
+        <div class="imgs">
+     <img  id="one"  src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/one.png" >
+     <img id="one1" src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/two.png">
+    <img id="one2" src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/thrww.png">
+    <img id="one3"src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/four.png">
+
+    </div>
+    </div>
+
+
+
     <section class="feedback">
         <div class="container">
             <div class="row">
@@ -580,5 +775,6 @@
         </div>
 
     </section>
+
 </body>
 </html>
