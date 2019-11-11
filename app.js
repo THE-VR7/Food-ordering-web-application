@@ -68,13 +68,15 @@ app.get("/register", function (req, res) {
 });
 //handling user sign up
 app.post("/register", function (req, res) {
-    User.register(new User({ _id: req.body._id,password: req.body.password,email: req.body.email,name: req.body.name }), function (err, user) {
+    User.register(new User({ username: req.body.username,email: req.body.email,name: req.body.name }),req.body.password, function (err, user) {
         if (err) {
             console.log(err);
-            return res.render('register');
+            return res.render('/',document.getElementById('id01').style.display='none',document.getElementById('id02').style.display='block');
         } //user stragety
         passport.authenticate("local")(req, res, function () {
-            res.redirect("/login"); //once the user sign up
+            document.getElementById('id01').style.display='block'
+            document.getElementById('id02').style.display='none'
+            res.redirect("/"); //once the user sign up
         });
     });
 });

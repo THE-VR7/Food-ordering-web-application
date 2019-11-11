@@ -865,9 +865,9 @@
                                 <input type="password" name="password" required><br><br>
                                 <label>password</label>
                             </div>
-                            <button type="submit" id="rege">Register</button>
+                            <button type="submit" id="rege">Log in</button>
                             <br><br>
-                        <h5 style="color: blue;">Don't have an account &nbsp;&nbsp;&nbsp;&nbsp;<a href="/register" style="position: absolute;"> &nbsp;Sign up</a></h3>
+                        <h5 style="color: blue;">Don't have an account &nbsp;&nbsp;&nbsp;&nbsp;<a style="position: absolute;" onclick="document.getElementById('id02').style.display='block' , document.getElementById('id01').style.display='none'"> &nbsp;Sign up</a></h3>
                         <div class="container1" style="background-color: transparent"> 
                                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> 
                             </div>
@@ -885,7 +885,7 @@
                         </div>
                         <br>
                         <div class="inputbox">
-                            <input type="text" name="_id" required>
+                            <input type="email" name="email" required>
                             <label>Email</label>
                         </div>
                         <br>
