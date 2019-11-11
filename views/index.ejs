@@ -169,7 +169,7 @@
 
         .rw-words-1 span {
             font-size: 60px;
-            margin-left: 60px;
+            margin-left: -10px;
             line-height: 82%;
             animation: rotateWordsFirst 18s linear 0s;
             color: white;
@@ -177,10 +177,10 @@
         }
 
         .rw-words-2 span {
-            margin-top: -20px;
-            margin-left: 5px;
-            font-size: 45px;
-            text-indent: 105px;
+            margin-top: -30px;
+            margin-left: -24px;
+            font-size: 55px;
+            text-indent: 5px;
             color: White;
             animation: rotateWordsSecond 18s ease-in 0s;
         }
@@ -244,7 +244,7 @@
         #cool {
             width: 20px;
             height: 00px;
-            margin-left: 12%;
+            margin-left: 15%;
             border-left: 5px solid rgb(41, 190, 11);
             border-right: 5px solid rgb(41, 190, 11);
             margin-top: -36px;
@@ -258,7 +258,7 @@
         #cool1 {
             width: 20px;
             height: 00px;
-            margin-left: 86%;
+            margin-left: 83%;
             border-left: 5px solid rgb(41, 190, 11);
             border-right: 5px solid rgb(41, 190, 11);
             margin-top: -15px;
@@ -332,7 +332,7 @@
         }
 
         input[type="text"]::-webkit-input-placeholder {
-            color: silver;
+            color: White;
             text-align: left !important;
             padding-left: 50px;
 
@@ -345,7 +345,7 @@
             background-color: transparent;
             margin-left: -50px;
             width: 470px;
-            color: darkgrey !important;
+            color: white !important;
             height: 70px;
             font-size: 28px;
             padding-left: 60px;
@@ -363,7 +363,7 @@
             background-image: linear-gradient(#00ff7e, #1f3d90);
             font-size: 24px;
             border: 0 !important;
-            color: darkgray !important;
+            color: white !important;
             padding: 4px 10px 7px 24px !important;
             border-radius: 30px !important;
             box-shadow: none !important;
@@ -589,7 +589,7 @@
             width: 190px;
             height: 240px;
             margin-top: 5px;
-            margin-left: 40px;
+            margin-left: 55px;
         }
         #one {
             animation: first 2s;
@@ -663,6 +663,155 @@
                 opacity: 1;
             }
         }
+
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        #rege { 
+            position: relative;
+            display: block;
+		background-color: #4CAF50; 
+		color: white; 
+		margin-left: 45px;
+		border: none;
+        font-size: 19px;
+        letter-spacing: 2px; 
+		cursor: pointer; 
+		width: 70%; 
+	} 
+        #rege:hover { 
+		opacity: 0.8; 
+	} 
+    .modal { 
+		display: none; 
+		position: fixed; 
+		z-index: 210; 
+		left: 0; 
+		top: 0; 
+		width: 100%; 
+		height: 100%; 
+		overflow: auto; 
+		background-color: rgb(0, 0, 0); 
+		background-color: rgba(0, 0, 0, 0.527); 
+		padding-top: 60px; 
+	} 
+	
+        .box {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            padding: 40px;
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+        }
+        .box:nth-child(1) {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            padding: 40px;
+            background-image: linear-gradient(to right, rgb(2, 15, 14),rgb(0, 153, 255));
+            box-sizing: border-box;
+            border-radius: 10px;
+            box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+        }
+        .modal-content {
+            width: 330px;
+            height: 400px;
+            background: transparent;
+        }
+        h1 {
+            text-align: center;
+            margin: 0 0 30px;
+            margin-top: -20px;
+            padding: 0px;
+            color: white;
+        }
+
+        .box .inputbox {
+            position: relative;
+            width: 100%;
+            background: transparent;
+        }
+
+        .box .inputbox input {
+            width: 100%;
+            padding: 10px 0;
+            font-size: 16px;
+            color: white;
+            margin-bottom: 10px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            border-bottom: 1px solid white;
+        }
+
+        .box .inputbox label {
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: white;
+            padding: 10px 0;
+            font-size: 19px;
+            pointer-events: none;
+            transition: .5s;
+        }
+
+        .box .inputbox input:focus~label,
+        .box .inputbox input:valid~label {
+            top: -13px;
+            left: 0;
+            color: deepskyblue;
+            font-size: 14px;
+        }
+
+        .box button[type="submit"] {
+            margin-top: 10px;
+            margin-left: 35%;
+            background: transparent;
+            border: none;
+            outline: none;
+            color: white;
+            background: deepskyblue;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    .cancelbtn { 
+        margin-left: 90px;
+        margin-top: 60px;
+		width: 40%; 
+		padding: 10px 20px;
+        font-size: 19px; 
+        color: white;
+        letter-spacing: 2px; 
+        border-radius: 5px;
+        border:none;
+		background-color: #f81c1cbb; 
+	} 
+    .animate { 
+	animation: animatezoom 0.5s 
+	}
+    @keyframes animatezoom { 
+		from { 
+			transform: scale(0) 
+		} 
+		to { 
+			transform: scale(1) 
+		} 
+	} 
+ #reg1 {
+    text-align: center;
+            margin: 0 0 30px;
+            padding: 0px;
+            color: white;
+ }
+
     </style>
 </head>
 
@@ -684,13 +833,78 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active"><a class="nav-link" href="index.ejs">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="menu.ejs">Menu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/login">Log in</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/register">Sign up</a></li>
+                        <li class="nav-item"><a class="nav-link" onclick="document.getElementById('id01').style.display='block'" style="width:auto; cursor: pointer;">Log in</a></li>
+                        <li class="nav-item"><a class="nav-link" onclick="document.getElementById('id02').style.display='block'" style="width:auto; cursor: pointer;">Sign up</a></li>
                 </div>
             </div>
             </div>
         </nav>
     </header>
+
+    <div id="id01" class="modal">
+            <div class="box" style="background: rgba(0, 0, 0, 1);">
+                    <h1>Login</h1>
+                <form method="POST" action="/login" class="modal-content animate">
+                            <div class="inputbox">
+                                    <input type="text" name="username" required>
+                                <label> username </label>
+                            </div>
+                            <div class="inputbox">
+                                <input type="password" name="password" required><br><br>
+                                <label>password</label>
+                            </div>
+                            <button type="submit" id="rege">Register</button>
+                            <br><br>
+                        <h5 style="color: blue;">Don't have an account &nbsp;&nbsp;&nbsp;&nbsp;<a href="/register" style="position: absolute;"> &nbsp;Sign up</a></h3>
+                        <div class="container1" style="background-color: transparent"> 
+                                <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button> 
+                            </div>
+                </form>
+            </div>
+    </div> 
+
+    <div id="id02" class="modal">
+            <div class="box">
+                    <h2 id="reg1">Register Yourself</h2>
+                    <form method="POST" action="/register" class="animate">
+                        <div class="inputbox">
+                            <input type="text" name="name" required>
+                            <label>Enter Your Name</label>
+                        </div>
+                        <div class="inputbox">
+                            <input type="text" name="_id" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="inputbox">
+                            <input type="username" name="username" required>
+                            <label>Username</label>
+                        </div>
+                        <div class="inputbox">
+                            <input type="password" name="password" required>
+                            <label>Enter Password</label>
+                        </div>
+                        <button type="submit" style="letter-spacing: 2px; font-size: 19px; margin-top: 15px; margin-left: 95px;">Register</button>
+                    </form>
+            </div>
+    </div>
+
+    <script> 
+            var modal = document.getElementById('id01'); 
+            window.onclick = function(event) { 
+                if (event.target == modal) { 
+                    modal.style.display = "none"; 
+                } 
+            } 
+        </script> 
+        <script> 
+                var modal = document.getElementById('id02'); 
+                window.onclick = function(event) { 
+                    if (event.target == modal) { 
+                        modal.style.display = "none"; 
+                    } 
+                } 
+            </script> 
+
     <section class="header" id="img"
         style="background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/slide_2.jpg')">
         <div class="cont1">
@@ -701,7 +915,7 @@
                     <div class="rw-words rw-words-1">
                         <span>Network of over 5000 Restaurants</span>
                     </div>
-                    <div class="rw-words rw-words-2" style="text-align: unset;">
+                    <div class="rw-words rw-words-2">
                         <span>To Order Online</span>
                     </div>
                 </h2>
