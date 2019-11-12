@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        onload = start;
+        function start() {
+            var im1 = "linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/banner12.jpg')"
+            var im2 = "linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/img3.jpg')"
+            var im3 = "linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/img2.jpg')"
+            var im4 = "linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/img-5.jpg')"
+            var im5 = "linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/img-4.jpg')"
+            var i = 0;
+            function Move() {
+                i = (i % 5) + 1; // 5 is the Number of image in slider
+                if (i == 1) {
+                    document.getElementById('img').style.backgroundImage = im1
+                }
+                else if (i == 2) {
+                    document.getElementById('img').style.backgroundImage = im2
+                }
+                else if (i == 3) {
+                    document.getElementById('img').style.backgroundImage = im3
+                }
+                else if (i == 4) {
+                    document.getElementById('img').style.backgroundImage = im4
+                }
+                else {
+                    document.getElementById('img').style.backgroundImage = im5
+                }
+            }
+            setInterval(Move, 3000); //change img in 3 sec
+        }
+    </script>
+    <style>
+        body {
+            height: auto;
+        }
+
+        .header {
+            height: 650px;
+            width: 100%;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            padding-top: 20px;
+            text-align: center;
+            color: white;
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes header {
+            from {
+                opacity: .4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .top-navbar {
+            position: relative;
+            z-index: 170;
+        }
+
+        .top-navbar .navbar {
+            padding: 15px 0px;
+            position: fixed;
+            width: 100%;
+            border-radius: 0px 0px 100px 100px;
+            transition: height .3s ease-out, background .3s ease-out, box-shadow .3s ease-out;
+            transform: translate3d(0, 0, 0);
+            box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.4);
+            z-index: 100;
+        }
+
+        .top-navbar .navbar-light .navbar-nav .nav-link {
+            color: #010101;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .top-navbar .navbar-light .navbar-nav .nav-item .nav-link:hover {
+            background: #d65106;
+            color: #ffffff;
+        }
+
+        .top-navbar .navbar-light .navbar-nav .nav-item.active .nav-link {
+            background: #d65106;
+            color: #ffffff;
+            border-radius: 4px;
+        }
+
+        .navbar-expand-lg .navbar-nav .dropdown-menu {
+            border: none;
+            border-radius: 0px;
+            padding: 10px;
+            box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.5);
+        }
+
+        .navbar-expand-lg .navbar-nav .dropdown-menu a {
+            padding: 10px 10px;
+            text-transform: uppercase;
+        }
+
+        .navbar-expand-lg .navbar-nav .dropdown-menu a.dropdown-item:hover {
+            background: #d65106;
+            color: #ffffff;
+        }
+
+        .navbar-light .navbar-toggler:hover {
+            background: #d65106;
+        }
+
+        .navbar1 {
+            width: 100px;
+            height: 66px;
+        }
+
+        .navbar2 {
+            margin-left: 35%;
+        }
+
+        .cont1 {
+            width: 90%;
+            height: 50%;
+            margin-top: 100px;
+            margin-left: 100px;
+            min-width: 320px;
+            position: absolute;
+            z-index: 100;
+            background-color: transparent;
+        }
+
+        .rw-wrapper {
+            width: 100%;
+            position: absolute;
+            z-index: 120;
+            margin-top: 100px;
+            margin-left: -670px;
+            padding: 10px;
+        }
+
+        .rw-words {
+            width: 100%;
+            height: 100px;
+            perspective: 800px;
+        }
+
+        .rw-words span {
+            position: absolute;
+            width: 100%;
+            opacity: 1;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+
+        .rw-words-1 span {
+            font-size: 60px;
+            margin-left: 5px;
+            line-height: 82%;
+            animation: rotateWordsFirst 18s linear 0s;
+            color: white;
+            font-style: italic;
+        }
+
+        .rw-words-2 span {
+            margin-top: -20px;
+            margin-left: 57px;
+            font-size: 45px;
+            text-indent: 5px;
+            color: White;
+            animation: rotateWordsSecond 18s ease-in 0s;
+        }
+
+        @keyframes rotateWordsFirst {
+            0% {
+                opacity: 0;
+                animation-timing-function: ease-in;
+                width: 0px;
+            }
+
+            5% {
+                opacity: 1;
+                animation-timing-function: ease-out;
+                width: 50%;
+            }
+
+            17% {
+                opacity: 1;
+                width: 100%;
+                animation-timing-function: ease-out;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes rotateWordsSecond {
+            0% {
+                opacity: 0;
+                transform: translateZ(600px) translateX(200px);
+                animation-timing-function: ease-in;
+            }
+
+            8% {
+                opacity: 1;
+                transform: translateZ(300px) translateX(100px);
+                animation-timing-function: ease-out;
+            }
+
+            17% {
+                opacity: 1;
+                transform: translateZ(0px) translateX(0px);
+                animation-timing-function: ease-out;
+            }
+
+            25% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+
+        #cool {
+            width: 20px;
+            height: 00px;
+            margin-left: 12%;
+            border-left: 5px solid rgb(41, 190, 11);
+            border-right: 5px solid rgb(41, 190, 11);
+            margin-top: -36px;
+            animation: grow 3s forwards;
+            animation-delay: 2s;
+            position: absolute;
+            z-index: 253;
+            transform-origin: 0 100%;
+        }
+
+        #cool1 {
+            width: 20px;
+            height: 00px;
+            margin-left: 86%;
+            border-left: 5px solid rgb(41, 190, 11);
+            border-right: 5px solid rgb(41, 190, 11);
+            margin-top: -15px;
+            animation: grow1 3s forwards;
+            animation-delay: 2s;
+            position: absolute;
+            z-index: 253;
+            transform-origin: 0 100%;
+        }
+
+        @keyframes grow {
+            0% {
+                height: 250px;
+                transform: rotateZ(0deg);
+
+                animation-timing-function: ease-in;
+            }
+
+            50% {
+                height: 250px;
+                transform: rotateZ(45deg);
+
+                animation-timing-function: ease-out;
+            }
+
+            100% {
+                height: 250px;
+                transform: rotateZ(90deg);
+
+                animation-timing-function: ease-out;
+            }
+        }
+
+        @keyframes grow1 {
+            0% {
+                height: 250px;
+                transform: rotateZ(0deg);
+
+                animation-timing-function: ease-in;
+            }
+
+            50% {
+                height: 250px;
+                transform: rotateZ(-45deg);
+
+                animation-timing-function: ease-out;
+            }
+
+            100% {
+                height: 250px;
+                transform: rotateZ(-90deg);
+
+                animation-timing-function: ease-out;
+            }
+
+        }
+
+        .input-group {
+            width: 600px;
+            /* border-top: ;
+            height: 50%; */
+            height: 100px;
+            position: absolute;
+            border-radius: 50px;
+            background-color: transparent;
+            margin-top: 70px;
+            padding: 2px;
+            z-index: 162;
+            top: 50%;
+            left: 35%;
+        }
+
+        input[type="text"]::-webkit-input-placeholder {
+            color: White;
+            text-align: left !important;
+            padding-left: 40px;
+
+        }
+
+        .form-control {
+            border: 0;
+            border-bottom: 1px solid black;
+            border-radius: 8px !important;
+            background-color: transparent;
+            margin-left: -50px;
+            width: 470px;
+            color: white !important;
+            height: 70px;
+            font-size: 28px;
+            padding-left: 70px;
+            padding-top: 19px;
+            box-shadow: none !important;
+            line-height: normal;
+        }
+
+       #icon {
+            width: 35px;
+            height: 35px;
+            margin-left: -320px;
+            margin-top: 24px;
+            position: absolute;
+            z-index: 215;
+            }
+        .input-group-text {
+            width: 120px;
+            height: 54px;
+            margin-left: 450px;
+            margin-top: -50px;
+            background-image: linear-gradient(#00ff7e, #1f3d90);
+            font-size: 24px;
+            border: 0 !important;
+            color: white !important;
+            padding: 4px 10px 7px 24px !important;
+            border-radius: 30px !important;
+            box-shadow: none !important;
+
+        }
+
+        input[type=text]:focus {
+            border-bottom: 1px solid rgba(0, 132, 255, 0.384);
+            background-color: transparent;
+        }
+
+        .feedback {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('http://getwallpapers.com/wallpaper/full/3/6/f/1289761-popular-farm-wallpaper-1920x1080-images.jpg#.XZ4vxGOkrlU.link');
+            padding-top: 85px;
+            background-attachment: fixed;
+            padding: 100px 0;
+        }
+
+        .h1h1 {
+            font-family: cursive;
+            font-weight: 300;
+            font-size: 60px;
+            color: white;
+            padding-left: 160px;
+        }
+
+        .h4h4 {
+            font-family: cursive;
+            font-weight: 400;
+            font-size: 20px;
+            color: white;
+            line-height: 1.5;
+            padding-left: 450px;
+        }
+
+        input:focus~label,
+        textarea:focus~label,
+        input:valid~label,
+        textarea:valid~label {
+            font-size: 0.75em;
+            color: gray;
+            top: -5px;
+            -webkit-transition: all 0.225s ease;
+            transition: all 0.225s ease;
+        }
+
+        .styled-input {
+            float: left;
+            width: 293px;
+            margin: 1rem 0;
+            position: relative;
+            border-radius: 4px;
+        }
+
+        @media only screen and (max-width: 768px) {
+            .styled-input {
+                width: 100%;
+            }
+        }
+
+        .styled-input label {
+            color: #999;
+            padding: 1.3rem 30px 1rem 30px;
+            position: absolute;
+            top: 10px;
+            left: 0;
+            -webkit-transition: all 0.25s ease;
+            transition: all 0.25s ease;
+            pointer-events: none;
+        }
+
+        .styled-input.wide {
+            width: 650px;
+            max-width: 100%;
+        }
+
+        input,
+        textarea {
+            padding: 30px;
+            border: 0;
+            width: 100%;
+            font-size: 1rem;
+            background-color: white;
+            color: black;
+            border-radius: 4px;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: 0;
+        }
+
+        input:focus~span,
+        textarea:focus~span {
+            width: 100%;
+            -webkit-transition: all 0.075s ease;
+            transition: all 0.075s ease;
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 15em;
+        }
+
+        .input-container {
+            width: 650px;
+            max-width: 100%;
+            margin: 20px auto 25px auto;
+        }
+
+        .submit-btn {
+            width: 130px;
+            padding: 8px 0;
+            outline: none !important;
+            border: 2px solid white;
+            border-radius: 50px;
+            background: transparent;
+            color: white;
+            margin-top: 20px;
+            text-align: center;
+            margin-left: 520px;
+        }
+        .anima1 {
+            width: 100%;
+            position: relative;
+            display: block;
+            height: 500px;
+           
+        }
+        .anima1 span {
+            font-size: 35px;
+            position: absolute;
+          
+            margin-left: 30%;
+            font-family: cursive;
+            padding-top: 35px;
+            color: #515151;
+            font-style: bold;
+            font-weight: 600;
+            animation: zm 3s;
+            animation-timing-function: linear;
+        }
+        @keyframes zm {
+            0% {
+                opacity: 0; 
+                transform:scale(0); 
+            }
+            50% {
+                opacity: 0.5; 
+                transform:scale(1.5);
+                }
+            100% { 
+                opacity: 1;
+                transform:scale(1); 
+                }
+        }
+        #st1 {
+            font-size: 30px;
+            position: absolute;
+            font-family: sans-serif;
+           
+            color: #E24425;
+            font-style: italic;
+            margin-top: 20px;
+            margin-left: 41%;
+            animation: zm 3s;
+            animation-timing-function: linear;
+        }
+        .lin1 {
+            position: absolute;
+            display: block;
+            margin-top: 45px;
+            margin-left: 270px;
+            width: 260px;
+            border-top: 2px dotted black;
+            animation: slideIn 2s forwards;
+            animation-timing-function: ease-out;
+        }
+        @keyframes slideIn { 
+            0% {
+            transform: translateX(-900px);
+            }
+            50% {
+                transform: translateX(50px);    
+            }
+            100% {
+            transform: translateX(0);
+        }
+        }
+        .lin2 {
+            width: 260px;
+            border-top: 2px dotted black;
+            color: green;
+            position: absolute;
+            margin-left: 950px;
+            margin-top: 45px;
+            animation: slideOut 2s forwards;
+            animation-timing-function: ease-out;
+        }
+        @keyframes slideOut { 
+            0% {
+                opacity: 0;
+            transform: translateX(900px);
+            }
+            50% {
+                transform: translateX(-50px);    
+            }
+            100% {
+            transform: translateX(0);
+        }
+        }
+        .imgs {
+          
+            width: 70%;
+            height: 250px;
+            margin: auto;
+            margin-top: 100px;
+
+        }
+        .imgs img {
+            
+            position: relative;
+            width: 190px;
+            height: 240px;
+            margin-top: 5px;
+            margin-left: 40px;
+        }
+        #one {
+            animation: first 2s;
+            animation-direction: alternate;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+        }
+        @keyframes first {
+            0% {
+                left: -70px;
+                opacity: 0;
+            }
+            100% { 
+                left: 20px; 
+                opacity: 1;
+            }
+        }
+        #one1 {
+            animation: first1 2s;
+            animation-direction: alternate;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+            opacity: 0;
+        }
+        @keyframes first1 {
+            0% {
+                left: -70px;
+                opacity: 0;
+            }
+            100% {
+                left: 20px; 
+                opacity: 1;
+            }
+        }
+        #one2 {
+            animation: first2 2s;
+            animation-direction: alternate;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            animation-delay: 2s;
+            opacity: 0;
+
+        }
+        @keyframes first2 {
+            0% {
+                left: -70px;
+                opacity: 0;
+            }
+            100% { 
+                left: 20px; 
+                opacity: 1;
+            }
+        }
+        #one3 {
+            animation: first3 2s;
+            animation-direction: alternate;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+            animation-delay: 3s;
+            opacity: 0;
+
+        }
+        @keyframes first3 {
+            0% {
+                left: -70px;
+                opacity: 0;
+            }
+            100% { 
+                left: 20px; 
+                opacity: 1;
+            }
+        }
+
+        * {
+            padding: 0px;
+            margin: 0px;
+        }
+        #rege { 
+            position: relative;
+            display: block;
+		background-color: #4CAF50; 
+		color: white; 
+		margin-left: 45px;
+		border: none;
+        font-size: 19px;
+        letter-spacing: 2px; 
+		cursor: pointer; 
+		width: 70%; 
+	} 
+        #rege:hover { 
+		opacity: 0.8; 
+	} 
+    .animate { 
+	animation: animatezoom 0.5s 
+	}
+    @keyframes animatezoom { 
+		from { 
+			transform: scale(0) 
+		} 
+		to { 
+			transform: scale(1) 
+		} 
+	} 
+ #reg1 {
+    text-align: center;
+            margin: 0 0 30px;
+            padding: 0px;
+            color: white;
+ }
+
+        .features {
+            padding: 100px 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.726), rgba(0, 0, 0, 0.6)), url(https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/banner21.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .feature-img img {
+            width: 100%;
+        }
+
+        .ratings {
+            color: gold;
+        }
+
+        .price {
+            color: red;
+            padding: 7px
+        }
+
+        .summary {
+            color: grey;
+            padding: 15px
+        }
+
+        .placename {
+            color: black;
+            font-family: cursive;
+            padding: 15px;
+
+        }
+
+        .feature-box {
+            background-color: white;
+            box-shadow: 0 0 10px 1px rgba(37, 73, 214, 0.18);
+            margin-bottom: 50px;
+
+        }
+
+        .feature-box:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .gallery {
+            padding: 100px 0;
+            background-color: lightgray;
+        }
+
+        .gallery-box img {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        .gallery-box img:hover {
+            transform: scale(1.1);
+        }
+
+        .gallery-box h4 {
+
+            font-weight: 600;
+            width: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        .gallery-box {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <header class="top-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Capturefgf.PNG"
+                        class="navbar1" alt="">
+                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Capture.PNG"
+                        class="navbar2" alt="" style="background: hidden;">
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars-rs-food"
+                    aria-controls="navbars-rs-food" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbars-rs-food">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active"><a class="nav-link" href="index.ejs">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="menu.ejs">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#"><%= username %></a></li>
+                        
+                </div>
+            </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="header" id="img"
+        style="background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/slide_2.jpg')">
+        <div class="cont1">
+            <div id="cool"></div>
+            <div id="cool1"></div>
+            <section class="rw-wrapper">
+                <h2 class="rw-sentence">
+                    <div class="rw-words rw-words-1">
+                        <span>Network of over 5000 Restaurants</span>
+                    </div>
+                    <div class="rw-words rw-words-2">
+                        <span>To Order Online</span>
+                    </div>
+                </h2>
+            </section>
+        </div>
+        <div class="input-group">
+            <form action="">
+                <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/sricon.png" id="icon">
+                <input type="text" class="form-control" placeholder="Enter the type of Food">
+                <button type="submit" class="input-group-text btn">Search</button>
+            </form>
+        </div>
+    </section>
+    <div class="anima1">
+        <span>Ordering food was never  so easy</span>
+        <br><br><br>
+        <div class="lin1"></div>
+        <pre id="st1">Just 4 steps follow</pre>
+        <div class="lin2"></div>
+        <div class="imgs">
+     <img  id="one"  src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/one.png" >
+     <img id="one1" src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/two.png">
+    <img id="one2" src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/thrww.png">
+    <img id="one3"src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/four.png">
+
+    </div>
+    </div>
+
+    <section class="features">
+        <h1 style="text-align: center; padding-bottom: 30px; font-family: sans-serif;font-weight: 700; color: white;">Featured
+            Food Items</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-img">
+                            <img
+                                src="https://static01.nyt.com/images/2017/01/18/world/australia-newsletter/australia-newsletter-articleLarge.jpg?quality=75&auto=webp&disable=upscale">
+                        </div>
+                        <span class="price">1,00,000 INR</span> &nbsp
+                        <span class="ratings">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+
+                        </span>
+                        <div class="placename">
+                            <h3>Sydney</h3>
+                        </div>
+                        <div class="summary">
+                            <p>
+                                Sydney, capital of New South Wales and one of Australia's largest cities,
+                                is best known for its Sydney Opera House, with a distinctive sail-like design.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-img">
+                            <img
+                                src="https://cdn-04.independent.ie/life/travel/article34651285.ece/4f0c0/AUTOCROP/w620/zurich.jpg">
+                        </div>
+                        <span class="price">1,50,000 INR</span> &nbsp
+                        <span class="ratings">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+
+                        </span>
+                        <div class="placename">
+                            <h3>Zurich</h3>
+                        </div>
+                        <div class="summary">
+                            <p>
+                                The city of Zurich, a global center for banking and finance, lies at the north end
+                                of Lake Zurich in northern Switzerland.
+                                The picturesque lanes of the central Altstadt.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-img">
+                            <img
+                                src="https://www.gannett-cdn.com/media/2018/12/15/USATODAY/usatsports/MotleyFool-TMOT-657f0436-21e9af86.jpg">
+                        </div>
+                        <span class="price">2,50,000 INR</span> &nbsp
+                        <span class="ratings">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+
+                        </span>
+                        <div class="placename">
+                            <h3>New York</h3>
+                        </div>
+                        <div class="summary">
+                            <p>
+                                New York City comprises 5 boroughs sitting where the Hudson River
+                                meets the Atlantic Ocean. At its core is Manhattan,
+                                which is the world’s major
+                                financial and cultural centers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="feedback">
+        <div class="container">
+            <div class="row">
+                <h1 class="h1h1">Share your problems with us</h1>
+            </div>
+            <div class="row">
+                <h4 class="h4h4" style="text-align:center">We'd love to hear from you!</h4>
+            </div>
+            <form method="POST" action="/">
+                <div class="row input-container">
+                    <div class="col-xs-12">
+                        <div class="styled-input wide">
+                            <input type="text" name="Name" required />
+                            <label>Name</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="styled-input">
+                            <input type="email" name="email" required />
+                            <label>Email</label>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                        <div class="styled-input" style="float:right;">
+                            <input type="text" name="phonenumber" required />
+                            <label>Phone Number</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <div class="styled-input wide">
+                            <textarea name="text" required></textarea>
+                            <label>Message</label>
+                        </div>
+                    </div>
+                    <div class="col-xs-12">
+                        <button type="submit" class="btnmsg">Send message</butto>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+
+    </section>
+
+</body>
+</html>
