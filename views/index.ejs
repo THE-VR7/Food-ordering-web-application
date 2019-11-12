@@ -8,6 +8,7 @@
     <title>Document</title>
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script>
         onload = start;
         function start() {
@@ -334,7 +335,7 @@
         input[type="text"]::-webkit-input-placeholder {
             color: White;
             text-align: left !important;
-            padding-left: 50px;
+            padding-left: 40px;
 
         }
 
@@ -348,13 +349,20 @@
             color: white !important;
             height: 70px;
             font-size: 28px;
-            padding-left: 60px;
+            padding-left: 70px;
             padding-top: 19px;
             box-shadow: none !important;
             line-height: normal;
-
         }
 
+       #icon {
+            width: 35px;
+            height: 35px;
+            margin-left: -320px;
+            margin-top: 24px;
+            position: absolute;
+            z-index: 215;
+            }
         .input-group-text {
             width: 120px;
             height: 54px;
@@ -823,6 +831,81 @@
             color: white;
  }
 
+        .features {
+            padding: 100px 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.726), rgba(0, 0, 0, 0.6)), url(https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/banner21.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .feature-img img {
+            width: 100%;
+        }
+
+        .ratings {
+            color: gold;
+        }
+
+        .price {
+            color: red;
+            padding: 7px
+        }
+
+        .summary {
+            color: grey;
+            padding: 15px
+        }
+
+        .placename {
+            color: black;
+            font-family: cursive;
+            padding: 15px;
+
+        }
+
+        .feature-box {
+            background-color: white;
+            box-shadow: 0 0 10px 1px rgba(37, 73, 214, 0.18);
+            margin-bottom: 50px;
+
+        }
+
+        .feature-box:hover {
+            transform: scale(1.1);
+            transition: 1s;
+        }
+
+        .gallery {
+            padding: 100px 0;
+            background-color: lightgray;
+        }
+
+        .gallery-box img {
+            width: 100%;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        .gallery-box img:hover {
+            transform: scale(1.1);
+        }
+
+        .gallery-box h4 {
+
+            font-weight: 600;
+            width: 200px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+        }
+
+        .gallery-box {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+
     </style>
 </head>
 
@@ -936,6 +1019,7 @@
         </div>
         <div class="input-group">
             <form action="">
+                <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/sricon.png" id="icon">
                 <input type="text" class="form-control" placeholder="Enter the type of Food">
                 <button type="submit" class="input-group-text btn">Search</button>
             </form>
@@ -955,6 +1039,98 @@
 
     </div>
     </div>
+
+    <section class="features">
+        <h1 style="text-align: center; padding-bottom: 30px; font-family: sans-serif;font-weight: 700; color: white;">Featured
+            Food Items</h1>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-img">
+                            <img
+                                src="https://static01.nyt.com/images/2017/01/18/world/australia-newsletter/australia-newsletter-articleLarge.jpg?quality=75&auto=webp&disable=upscale">
+                        </div>
+                        <span class="price">1,00,000 INR</span> &nbsp
+                        <span class="ratings">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+
+                        </span>
+                        <div class="placename">
+                            <h3>Sydney</h3>
+                        </div>
+                        <div class="summary">
+                            <p>
+                                Sydney, capital of New South Wales and one of Australia's largest cities,
+                                is best known for its Sydney Opera House, with a distinctive sail-like design.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-img">
+                            <img
+                                src="https://cdn-04.independent.ie/life/travel/article34651285.ece/4f0c0/AUTOCROP/w620/zurich.jpg">
+                        </div>
+                        <span class="price">1,50,000 INR</span> &nbsp
+                        <span class="ratings">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+
+                        </span>
+                        <div class="placename">
+                            <h3>Zurich</h3>
+                        </div>
+                        <div class="summary">
+                            <p>
+                                The city of Zurich, a global center for banking and finance, lies at the north end
+                                of Lake Zurich in northern Switzerland.
+                                The picturesque lanes of the central Altstadt.
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-box">
+                        <div class="feature-img">
+                            <img
+                                src="https://www.gannett-cdn.com/media/2018/12/15/USATODAY/usatsports/MotleyFool-TMOT-657f0436-21e9af86.jpg">
+                        </div>
+                        <span class="price">2,50,000 INR</span> &nbsp
+                        <span class="ratings">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+
+                        </span>
+                        <div class="placename">
+                            <h3>New York</h3>
+                        </div>
+                        <div class="summary">
+                            <p>
+                                New York City comprises 5 boroughs sitting where the Hudson River
+                                meets the Atlantic Ocean. At its core is Manhattan,
+                                which is the world’s major
+                                financial and cultural centers.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
 
 
