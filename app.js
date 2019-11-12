@@ -64,14 +64,15 @@ app.get("/login", function (req, res) {
 });
 
 app.get("/register", function (req, res) {
-    res.render("register");
+    res.render("/")
+    // document.getElementById().style.display='none',document.getElementById('id02').style.display='block'
 });
 //handling user sign up
 app.post("/register", function (req, res) {
     User.register(new User({ username: req.body.username,email: req.body.email,name: req.body.name }),req.body.password, function (err, user) {
         if (err) {
             console.log(err);
-            return res.render('/',document.getElementById('id01').style.display='none',document.getElementById('id02').style.display='block');
+            return res.render('/register');
         } //user stragety
         passport.authenticate("local")(req, res, function () {
             document.getElementById('id01').style.display='block'
