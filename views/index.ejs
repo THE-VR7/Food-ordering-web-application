@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://the-vr7.github.io/Hello-World/animations.css">
     <script>
         onload = start;
         function start() {
@@ -705,7 +706,7 @@
 		padding-top: 60px; 
 	} 
 	
-        .box {
+        .boxlog {
             position: absolute;
             left: 50%;
             top: 50%;
@@ -716,7 +717,7 @@
             border-radius: 10px;
             box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
         }
-        .box:nth-child(1) {
+        .boxlog:nth-child(1) {
             position: absolute;
             left: 50%;
             top: 50%;
@@ -741,13 +742,13 @@
             color: white;
         }
 
-        .box .inputbox {
+        .boxlog .inputbox {
             position: relative;
             width: 100%;
             background: transparent;
         }
 
-        .box .inputbox input {
+        .boxlog .inputbox input {
             width: 100%;
             padding: 9px 0;
             font-size: 16px;
@@ -759,7 +760,7 @@
             border-bottom: 1px solid white;
         }
 
-        .box .inputbox label {
+        .boxlog .inputbox label {
             position: absolute;
             top: 0;
             left: 0;
@@ -770,15 +771,15 @@
             transition: .5s;
         }
 
-        .box .inputbox input:focus~label,
-        .box .inputbox input:valid~label {
+        .boxlog .inputbox input:focus~label,
+        .boxlog .inputbox input:valid~label {
             top: -13px;
             left: 0;
             color: deepskyblue;
             font-size: 14px;
         }
 
-        .box button[type="submit"] {
+        .boxlog button[type="submit"] {
             margin-top: 4px;
             margin-left: 35%;
             background: transparent;
@@ -794,7 +795,7 @@
             cursor: pointer;
             border: 1px solid rgba(255, 255, 255, 0.767);
         }
-        .box button[type="submit"]:hover {
+        .boxlog button[type="submit"]:hover {
             background: deepskyblue;
             transform: scale(1.2);
             transition: 0.5s;
@@ -943,6 +944,90 @@
             transform: scale(1.5);
         }
 
+        .features1 {
+          padding: 100px 0;
+            background-color: rgba(173, 216, 230, 0.089);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        #lin {
+      border-top: 2px dotted grey;
+    }
+    .list-group-item {
+      margin-top: 15%;
+      border-top: 0;
+      text-align: center;
+      font-size: 24px;
+      font-family: cursive;
+    }
+    .list-group a:hover{
+      background-color: orange;
+      border-radius: 5px;
+      color: white;
+      cursor: pointer;
+      font-size: 26px;
+    }
+    .list-group a:focus{
+      background-color: red;
+      color: white;
+      font-size: 26px;
+      border-radius: 5px;
+    }
+    #img11 {
+      margin-top: 2%;
+      margin-left: 3%;
+      height: 220px;
+      padding: 0;
+      border: 1px solid rgba(169, 169, 169, 0.301);
+    }
+    #img22 {
+      margin-top: 2%;
+      padding: 0;
+      margin-left: 10%;
+      height: 220px;
+      border: 1px solid rgba(169, 169, 169, 0.301);
+    }
+    #img33 {
+      margin-top: 5%;
+      padding: 0;
+      margin-left: 3%;
+      height: 220px;
+      border: 1px solid rgba(169, 169, 169, 0.301);
+    }
+    #img44 {
+      margin-top: 5%;
+      padding: 0;
+      margin-left: 10%;
+      height: 220px;
+      border: 1px solid rgba(169, 169, 169, 0.301);
+    }
+    #pizza {display: none;}
+    #burger {display: none;}
+    #paneer {display: none;}
+    #icecream {display: none;}
+    .figure-img {
+     width: 100%;
+     height: 178px;
+    }
+    .figure-caption {
+      padding: 0;
+      margin-top: -8px;
+      height: 42px;
+      text-align: center;
+      font-family: cursive;
+      overflow: hidden;
+      font-size: 24px;
+      font-style: normal;
+      background-color: rgba(169, 169, 169, 0.301);
+      color: #515151;
+      border-radius: 2px;
+    }
+    .figure-caption:hover {
+      color: green;
+      cursor: pointer;
+      font-size: 25px;
+    }
     </style>
 </head>
 
@@ -973,7 +1058,7 @@
     </header>
 
     <div id="id01" class="modal">
-            <div class="box" style="background: rgba(0, 0, 0, 1);">
+            <div class="boxlog" style="background: rgba(0, 0, 0, 1);">
                     <h1>Login</h1>
                 <form method="POST" action="/login" class="modal-content animate" id="myform">
                             <div class="inputbox">
@@ -1169,7 +1254,8 @@
         </div>
     </section>
 
-
+   
+    
 
     <section class="feedback">
         <div class="container">
@@ -1213,6 +1299,162 @@
             </form>
         </div>
     </section>
+    <section class="features1">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                    <div class="row animatedParent animateOnce">
+                      <div class="col-4 col-md-5 animated rollIn box data-id='1'">
+                          <h4 id="one">Our Menu</h4>
+                      </div>
+                      <div class="col-8 col-md-7 dotted animated lightSpeedInRight box data-id='2 delay-250">
+                        <hr id="lin">
+                      </div>
+                    </div>
+                    <div class="row">
+                          <div class="col-12 col-md-12">
+                              <div class="list-group list-group-flush animatedParent animateOnce">
+                                  <a onclick="show_pizza()" class="list-group-item list-group-item-action animated fadeInDown box delay-500 slow">Pizza</a>
+                                  <a onclick="show_burger()" class="list-group-item list-group-item-action animated fadeInDown box delay-750 slow">Burger</a>
+                                  <a onclick="show_paneer()" class="list-group-item list-group-item-action animated fadeInDown box delay-1000 slow">Paneer</a>
+                                  <a onclick="show_icecream()"class="list-group-item list-group-item-action animated fadeInDown box delay-1250 slow">Ice Cream</a>
+                              </div>  
+                          </div>
+                    </div>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div class="row animatedParent animateOnce">
+                            <div class="col-5 col-md-5 animated rollIn box delay-1500">
+                                <h4 id="one">Top Cuisines</h4>
+                            </div>
+                            <div class="col-7 col-md-7 dotted animated lightSpeedInRight box delay-2500">
+                              <hr id="lin">
+                            </div>
+                    </div>
+                    <div id="pizza">
+                    <div class="row">
+                      <div class="col-5 col-md-5" id="img11">  
+                        <figure class="figure">
+                              <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/IndianTandooriPaneer.jpg" class="figure-img img-fluid rounded">
+                              <figcaption class="figure-caption">Indi Tandoori</figcaption>
+                            </figure>
+                      </div>
+                      <div class="col-5 col-md-5" id="img22">
+                          <figure class="figure">
+                              <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/peppypaneer.png" class="figure-img img-fluid rounded">
+                              <figcaption class="figure-caption">Peppy Paneer</figcaption>
+                            </figure>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 col-md-5" id="img33">
+                            <figure class="figure">
+                                <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/vegextra.png" class="figure-img img-fluid rounded">
+                                <figcaption class="figure-caption">Veg Extravaganza</figcaption>
+                              </figure>
+                        </div>
+                        <div class="col-5 col-md-5" id="img44">
+                            <figure class="figure">
+                                <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/mexgreen.png" class="figure-img img-fluid rounded">
+                                <figcaption class="figure-caption">Mexican Green Wave</figcaption>
+                              </figure>
+                        </div>
+                      </div>
+                </div>
+                <div id="burger">
+                    <div class="row">
+                      <div class="col-5 col-md-5" id="img11">
+                          <figure class="figure">
+                              <img src="https://i.ytimg.com/vi/q7Idojp5ZY8/maxresdefault.jpg" class="figure-img img-fluid rounded">
+                              <figcaption class="figure-caption">Mc Aloo Tikki</figcaption>
+                            </figure>
+                      </div>
+                      <div class="col-5 col-md-5" id="img22">
+                          <figure class="figure">
+                              <img src="https://i1.wp.com/files.hungryforever.com/wp-content/uploads/2016/07/10202927/McDonalds-Featured.jpg?resize=1075%2C605&ssl=1" class="figure-img img-fluid rounded">
+                              <figcaption class="figure-caption">Mexican Mc Aloo Tikki</figcaption>
+                            </figure>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 col-md-5" id="img33">
+                            <figure class="figure">
+                                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvDfrD9Or8ap6NcGJ64GhW6xdzl0o0elqArC-PJ670a9-6dFFBlg&s" class="figure-img img-fluid rounded">
+                                <figcaption class="figure-caption">American Cheese</figcaption>
+                              </figure>
+                        </div>
+                        <div class="col-5 col-md-5" id="img44">
+                            <figure class="figure">
+                                <img src="https://glamadelaide.com.au/wp-content/uploads/2019/04/McDonalds_Veggie_Burger.png" class="figure-img img-fluid rounded">
+                                <figcaption class="figure-caption">McVeggi</figcaption>
+                              </figure>
+                        </div>
+                      </div>
+                </div>
+                <div id="paneer">
+                    <div class="row">
+                      <div class="col-5 col-md-5" id="img11">
+                          <figure class="figure">
+                              <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Paneer%20Do%20Pyaza.jpg" class="figure-img img-fluid rounded">
+                              <figcaption class="figure-caption">Paneer Do Pyaza</figcaption>
+                            </figure>
+                      </div>
+                      <div class="col-5 col-md-5" id="img22">
+                          <figure class="figure">
+                              <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Mattar%20Paneer.jpg" class="figure-img img-fluid rounded">
+                              <figcaption class="figure-caption">Mattar Paneer</figcaption>
+                            </figure>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 col-md-5" id="img33">
+                            <figure class="figure">
+                                <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Kadai%20Paneer.jpg" class="figure-img img-fluid rounded">
+                                <figcaption class="figure-caption">Kadai Paneer</figcaption>
+                              </figure>
+                        </div>
+                        <div class="col-5 col-md-5" id="img44">
+                            <figure class="figure">
+                                <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Shahi%20Paneer.jpg" class="figure-img img-fluid rounded">
+                                <figcaption class="figure-caption">Shahi Paneer</figcaption>
+                              </figure>
+                        </div>
+                      </div>
+                </div>
+                <div id="icecream">
+                    <div class="row">
+                      <div class="col-5 col-md-5" id="img11">
+                          <figure class="figure">
+                              <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Fresh%20Fruit%20Mango%20Ice%20Cream.jpg" class="figure-img img-fluid rounded">
+                              <figcaption class="figure-caption">Fresh Mango</figcaption>
+                            </figure>
+                      </div>
+                      <div class="col-5 col-md-5" id="img22">
+                          <figure class="figure">
+                              <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Coconut%20Ice%20cream.jpg" class="figure-img img-fluid rounded">
+                              <figcaption class="figure-caption">Fresh Coconut</figcaption>
+                            </figure>
+                      </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-5 col-md-5" id="img33">
+                            <figure class="figure">
+                                <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/StrawBerry%20Ice%20cream.jpg" class="figure-img img-fluid rounded">
+                                <figcaption class="figure-caption">Straw Berry</figcaption>
+                              </figure>
+                        </div>
+                        <div class="col-5 col-md-5" id="img44">
+                            <figure class="figure">
+                                <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Kesar%20Pasta%20Ice%20cream.jpg" class="figure-img img-fluid rounded">
+                                <figcaption class="figure-caption">Kesar Pasta</figcaption>
+                              </figure>
+                        </div>
+                      </div>
+                </div>
+              </div>
+            </div>
+          </div>    
+        </section>
 
     <section id="aboutus" class="aboutus" >
       
@@ -1267,6 +1509,42 @@
                 </p>
         </div>
     </section>
-
+    <script>
+            function show_pizza()
+            {
+              document.getElementById("pizza").style.display = "block";
+              document.getElementById("burger").style.display = "none";
+              document.getElementById("paneer").style.display = "none";
+              document.getElementById("icecream").style.display = "none";
+            }
+            function show_burger()
+            {
+              document.getElementById("pizza").style.display = "none";
+              document.getElementById("burger").style.display = "block";
+              document.getElementById("paneer").style.display = "none";
+              document.getElementById("icecream").style.display = "none";
+            }
+            function show_paneer()
+            {
+              document.getElementById("pizza").style.display = "none";
+              document.getElementById("burger").style.display = "none";
+              document.getElementById("paneer").style.display = "block";
+              document.getElementById("icecream").style.display = "none";
+            }
+            function show_icecream()
+            {
+              document.getElementById("pizza").style.display = "none";
+              document.getElementById("burger").style.display = "none";
+              document.getElementById("paneer").style.display = "none";
+              document.getElementById("icecream").style.display = "block";
+            }
+            </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://the-vr7.github.io/Hello-World/css3-animate-it.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
