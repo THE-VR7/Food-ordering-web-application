@@ -115,12 +115,13 @@
             padding: 10px 10px;
             text-transform: uppercase;
         }
-
         .navbar-expand-lg .navbar-nav .dropdown-menu a.dropdown-item:hover {
             background: #d65106;
-            color: #ffffff;
+            color: white;
+            font-style: bold;
+            border-radius: 4px;
+            
         }
-
         .navbar-light .navbar-toggler:hover {
             background: #d65106;
         }
@@ -231,9 +232,7 @@
             color: White;
             text-align: left !important;
             padding-left: 40px;
-
         }
-
         .form-control {
             border: 0;
             border-bottom: 1px solid black;
@@ -257,7 +256,6 @@
             margin-top: 24px;
             position: absolute;
             z-index: 215;
-            
             }
         .input-group-text {
             width: 120px;
@@ -271,7 +269,6 @@
             padding: 4px 10px 7px 24px !important;
             border-radius: 30px !important;
             box-shadow: none !important;
-
         }
 
         input[type=text]:focus {
@@ -591,6 +588,44 @@
             margin-bottom: 30px;
         }
 
+        
+        .aboutus {
+            padding: 100px;
+            height:500px;
+            background-color:black;
+        }
+        .info {
+            padding: 35px 35px 35px 35px;
+            margin: 5px 35px 35px 35px;
+          
+            box-sizing: border-box;
+            /* width: 50%; */
+            
+            height: 350px;
+            float: left;
+            
+        }
+        .gtch{
+            padding: 35px 35px 35px 35px;
+            margin: 5px 35px 35px 35px;
+            box-sizing: border-box;
+           
+            width: 30%;
+            height: 350px;
+            float: right;
+        }
+      
+        .uselik{
+            padding: 35px 35px 35px 35px;
+            margin: 5px 35px 35px 35px;
+             width: 25%;
+            height: 350px;
+            float: right;
+        }
+        .social a:hover {
+            transform: scale(1.5);
+        }
+
 
     </style>
 </head>
@@ -613,8 +648,13 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active"><a class="nav-link" href="index.ejs">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="menu.ejs">Menu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><%= name %></a></li>
-                        
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" area-haspopup="true" aria-expanded="false"><%= name %></a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                              <a class="dropdown-item" href="#">My Profile</a>
+                              <div class="dropdown-divider"></div>
+                              <a class="dropdown-item" href="#">Logout</a>
+                            </div>
+                        </li>
                 </div>
             </div>
             </div>
@@ -649,7 +689,6 @@
         <span>Ordering food was never  so easy <br> <center> Just 4 steps follow</center></span>
         <br><br><br>
         <div class="lin1"></div>
-        <!-- <div class="st777">Just 4 steps follow</div> -->
         <div class="lin2"></div>
         <div class="imgs">
      <img  id="one"  src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/one.png" >
@@ -796,5 +835,67 @@
             </form>
         </div>
     </section>
+
+    <section id="aboutus" class="aboutus" >
+      
+
+        <div class="info">
+            <img style="width: 190px; "
+                src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Capture.PNG">
+            <br>
+            <br>
+            <div style="color:grey; font-family:Verdana, Geneva, Tahoma, sans-serif; line-height: 10px;">
+                <p>Food Panda,
+
+                </p>
+                <p> GLA University</p>
+                <p>Mathura, UP</p>
+                <p>Uttar Pradesh 281001</p>
+            </div>
+            <br>
+
+            <p class="social" style="color: grey; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 20px;">Follow Us &nbsp
+                <a  href="#" style="color: white;"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                &nbsp <a  href="#" style="color: white;"><i class="fa fa-instagram" aria-hidden="true"></i></a> &nbsp <a style="color: white;"href=""><i class="fa fa-linkedin" aria-hidden="true"></i></a> 
+
+            </p>
+          
+        </div>
+
+        <div class="uselik">
+                <p style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 20px;">Useful Links</p>
+
+                <ul style="list-style: none;">
+                    <li><a style="text-decoration: none;" href="">FAQ</a></li>
+                    <li><a style="text-decoration: none;" href="">About</a></li>
+                    <li><a style="text-decoration: none;" href="">Terms and Condition</a></li>
+                    <li><a style="text-decoration: none;" href="">Privacy Policy</a></li>
+                    <li><a style="text-decoration: none;" href="">Terms of Use</a></li>
+                    <li><a style="text-decoration: none;" href="">Refund Policy</a></li>
+                </ul>
+
+        </div>
+        <div class="gtch">
+             
+                <p style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 20px;">Get in touch</p>
+                <p style="color: grey; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 15px;"><i
+                        class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp vineet.rathor_cs17@gla.ac.in
+                </p>
+                <p style="color: grey; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 15px;"><i
+                        class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp shaurabh.singh_cs17@gla.ac.in
+                </p>
+                <p style="color: grey; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 15px;"><i
+                        class="fa fa-envelope-o" aria-hidden="true"></i>&nbsp rajeev.ranjan_cs17@gla.ac.in
+                </p>
+        </div>
+    </section>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
