@@ -1,0 +1,21 @@
+FoodItem						Price						HotelAddress					Img url
+
+Indi Tandoori Pizza				450							Dominos						https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/IndianTandooriPaneer.jpg	
+Peppy Paneer Pizza				395							Dominos						https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/peppypaneer.png	
+Veg Extravaganza Pizza			450							Dominos						https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/vegextra.png	
+Mexican Green Wave Pizza		395							Dominos						https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/mexgreen.png	
+
+Mac Aloo Tikki Burger			48							MacDonalds'					https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/mac%20aloo%20tikki.png	
+Mexican Mac Aloo Tikki Burger 	55							MacDonalds'					https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Mexican%20mac%20aloo%20tikki.png	
+American Cheese Supreme			121							MacDonalds'					https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/American%20Cheese%20Supreme.png
+McVeggi Burger					107							MacDonalds'					https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/McVeggi%20Burger.png
+
+Paneer Do Pyaza					175							Agrawal Bhojanalay			https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Paneer%20Do%20Pyaza.jpg
+Mattar Paneer					120							Taj Family Restaurant		https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Mattar%20Paneer.jpg
+Kadai Paneer					155							Food Hut Restaurant			https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Kadai%20Paneer.jpg
+Shahi Paneer					165							Shankar Foods				https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Shahi%20Paneer.jpg
+
+Fresh Fruit Mango Ice cream		69							Baskin Robbins				https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Fresh%20Fruit%20Mango%20Ice%20Cream.jpg
+Coconut Ice cream				69							Baskin Robbins				https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Coconut%20Ice%20cream.jpg
+Straw Berry Ice cream			69							Baskin Robbins				https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/StrawBerry%20Ice%20cream.jpg
+Kesar Pasta Ice Cream			79							Baskin Robbins				https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Kesar%20Pasta%20Ice%20cream.jpg
