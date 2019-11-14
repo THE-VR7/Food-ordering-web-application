@@ -1314,11 +1314,11 @@
                     <div class="row">
                           <div class="col-12 col-md-12">
                               <div class="list-group list-group-flush animatedParent animateOnce">
-                                  <a onclick="show_pizza()" class="list-group-item list-group-item-action animated fadeInDown box delay-500 slow">Pizza</a>
-                                  <a onclick="show_burger()" class="list-group-item list-group-item-action animated fadeInDown box delay-750 slow">Burger</a>
-                                  <a onclick="show_paneer()" class="list-group-item list-group-item-action animated fadeInDown box delay-1000 slow">Paneer</a>
-                                  <a onclick="show_icecream()"class="list-group-item list-group-item-action animated fadeInDown box delay-1250 slow">Ice Cream</a>
-                              </div>  
+                                <a onclick="show_pizza()" id="pizzaid" class="list-group-item list-group-item-action animated fadeInDown box delay-500 slow">Pizza</a>
+                                <a onclick="show_burger()" id="burgerid" class="list-group-item list-group-item-action animated fadeInDown box delay-750 slow">Burger</a>
+                                <a onclick="show_paneer()" id="paneerid" class="list-group-item list-group-item-action animated fadeInDown box delay-1000 slow">Paneer</a>
+                                <a onclick="show_icecream()" id="icecreamid" class="list-group-item list-group-item-action animated fadeInDown box delay-1250 slow">Ice Cream</a>
+                            </div>  
                           </div>
                     </div>
                     </div>
@@ -1510,34 +1510,53 @@
         </div>
     </section>
     <script>
-            function show_pizza()
-            {
-              document.getElementById("pizza").style.display = "block";
-              document.getElementById("burger").style.display = "none";
-              document.getElementById("paneer").style.display = "none";
-              document.getElementById("icecream").style.display = "none";
-            }
-            function show_burger()
-            {
-              document.getElementById("pizza").style.display = "none";
-              document.getElementById("burger").style.display = "block";
-              document.getElementById("paneer").style.display = "none";
-              document.getElementById("icecream").style.display = "none";
-            }
-            function show_paneer()
-            {
-              document.getElementById("pizza").style.display = "none";
-              document.getElementById("burger").style.display = "none";
-              document.getElementById("paneer").style.display = "block";
-              document.getElementById("icecream").style.display = "none";
-            }
-            function show_icecream()
-            {
-              document.getElementById("pizza").style.display = "none";
-              document.getElementById("burger").style.display = "none";
-              document.getElementById("paneer").style.display = "none";
-              document.getElementById("icecream").style.display = "block";
-            }
+                    function show_pizza()
+        {
+          document.getElementById("pizza").style.display = "block";
+          document.getElementById("pizzaid").style = " background-color: red;color: white;font-size: 26px;border-radius: 5px;"
+          document.getElementById("paneerid").style = " background-color: white;color: black;font-size: 25px;border-radius: 5px;"
+          document.getElementById("icecreamid").style = " background-color: white;color: black;font-size: 25px;border-radius: 5px;"
+          document.getElementById("burgerid").style = " background-color: white;color: black;font-size: 25px;border-radius: 5px;"
+          document.getElementById("burger").style.display = "none";
+          document.getElementById("paneer").style.display = "none";
+          document.getElementById("icecream").style.display = "none";
+        }
+        function show_burger()
+        {
+          document.getElementById("pizza").style.display = "none";
+          document.getElementById("burger").style.display = "block";
+          document.getElementById("paneer").style.display = "none";
+          document.getElementById("icecream").style.display = "none";
+          document.getElementById("pizzaid").style = " background-color: white;color: black;font-size: 26px;border-radius: 5px;"
+          document.getElementById("paneerid").style = " background-color: white;color: black;font-size: 25px;border-radius: 5px;"
+          document.getElementById("icecreamid").style = " background-color: white;color: black;font-size: 25px;border-radius: 5px;"
+          document.getElementById("burgerid").style = " background-color: red;color: white;font-size: 25px;border-radius: 5px;"
+
+        }
+        function show_paneer()
+        {
+          document.getElementById("pizza").style.display = "none";
+          document.getElementById("burger").style.display = "none";
+          document.getElementById("paneer").style.display = "block";
+          document.getElementById("icecream").style.display = "none";
+          document.getElementById("pizzaid").style = " background-color: white;color: black;font-size: 26px;border-radius: 5px;"
+          document.getElementById("paneerid").style = " background-color: red;color: white;font-size: 25px;border-radius: 5px;"
+          document.getElementById("icecreamid").style = " background-color: white;color: black;font-size: 25px;border-radius: 5px;"
+          document.getElementById("burgerid").style = " background-color: white;color: black;font-size: 25px;border-radius: 5px;"
+
+        }
+        function show_icecream()
+        {
+          document.getElementById("pizza").style.display = "none";
+          document.getElementById("burger").style.display = "none";
+          document.getElementById("paneer").style.display = "none";
+          document.getElementById("icecream").style.display = "block";
+          document.getElementById("pizzaid").style = " background-color: white;color: black;font-size: 26px;border-radius: 5px;"
+          document.getElementById("paneerid").style = " background-color: white;color: black;font-size: 25px;border-radius: 5px;"
+          document.getElementById("icecreamid").style = " background-color: red;color: white;font-size: 25px;border-radius: 5px;"
+          document.getElementById("burgerid").style = " background-color: white;color: black;font-size: 25px;border-radius: 5px;"
+
+        }
             </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://the-vr7.github.io/Hello-World/css3-animate-it.js"></script>
