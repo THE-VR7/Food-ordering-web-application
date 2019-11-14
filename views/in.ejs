@@ -41,6 +41,9 @@
         }
     </script>
     <style>
+        html {
+            scroll-behavior: smooth;
+          }
         body {
             height: auto;
         }
@@ -788,7 +791,7 @@
     <header class="top-navbar">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
-                <a class="navbar-brand" href="index.html">
+                <a class="navbar-brand">
                     <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Capturefgf.PNG"
                         class="navbar1" alt="">
                     <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Capture.PNG"
@@ -801,7 +804,7 @@
                 <div class="collapse navbar-collapse" id="navbars-rs-food">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item active"><a class="nav-link" href="index.ejs">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="menu.ejs">Menu</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#menubox">Menu</a></li>
                         <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" data-toggle="dropdown" area-haspopup="true" aria-expanded="false"><%= name %></a>
                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                               <a class="dropdown-item" href="#">My Profile</a>
@@ -854,99 +857,92 @@
     </div>
 
     <section class="features">
-        <h1 style="text-align: center; padding-bottom: 30px; font-family: sans-serif;font-weight: 700; color: white;">Featured
-            Food Items</h1>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <div class="feature-img">
-                            <img
-                                src="https://static01.nyt.com/images/2017/01/18/world/australia-newsletter/australia-newsletter-articleLarge.jpg?quality=75&auto=webp&disable=upscale">
-                        </div>
-                        <span class="price">1,00,000 INR</span> &nbsp
-                        <span class="ratings">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                        </span>
-                        <div class="placename">
-                            <h3>Sydney</h3>
-                        </div>
-                        <div class="summary">
-                            <p>
-                                Sydney, capital of New South Wales and one of Australia's largest cities,
-                                is best known for its Sydney Opera House, with a distinctive sail-like design.
-
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <div class="feature-img">
-                            <img
-                                src="https://cdn-04.independent.ie/life/travel/article34651285.ece/4f0c0/AUTOCROP/w620/zurich.jpg">
-                        </div>
-                        <span class="price">1,50,000 INR</span> &nbsp
-                        <span class="ratings">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
-
-                        </span>
-                        <div class="placename">
-                            <h3>Zurich</h3>
-                        </div>
-                        <div class="summary">
-                            <p>
-                                The city of Zurich, a global center for banking and finance, lies at the north end
-                                of Lake Zurich in northern Switzerland.
-                                The picturesque lanes of the central Altstadt.
-
-                            </p>
+            <h1 style="text-align: center; padding-bottom: 30px; font-family: sans-serif;font-weight: 700; color: white;">Featured
+                Food Items</h1>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <div class="feature-img">
+                                <img
+                                    src="https://www.dominos.co.in/files/items/IndianTandooriPaneer.jpg" style="height: 200px;">
+                            </div>
+                            <span class="price">450 INR</span> &nbsp
+                            <span class="ratings">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+    
+                            </span>
+                            <div class="placename">
+                                <h3>Indi Tandoori Pizza</h3>
+                                <h4>Domino's</h4>
+                            </div>
+                            <div class="summary">
+                                <p>
+                                    !It is hot. It is spicy. It is oh-so-Indian. Tandoori paneer with capsicum I red paprika I mint mayo
+                                </p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="feature-box">
-                        <div class="feature-img">
-                            <img
-                                src="https://www.gannett-cdn.com/media/2018/12/15/USATODAY/usatsports/MotleyFool-TMOT-657f0436-21e9af86.jpg">
-                        </div>
-                        <span class="price">2,50,000 INR</span> &nbsp
-                        <span class="ratings">
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-                            <i class="fa fa-star" aria-hidden="true"></i>
-
-                        </span>
-                        <div class="placename">
-                            <h3>New York</h3>
-                        </div>
-                        <div class="summary">
-                            <p>
-                                New York City comprises 5 boroughs sitting where the Hudson River
-                                meets the Atlantic Ocean. At its core is Manhattan,
-                                which is the world’s major
-                                financial and cultural centers.
-                            </p>
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <div class="feature-img">
+                                <img
+                                    src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/McVeggi%20Burger.png" style="height: 200px;">
+                            </div>
+                            <span class="price">107 INR</span> &nbsp
+                            <span class="ratings">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star-half-o" aria-hidden="true"></i>
+    
+                            </span>
+                            <div class="placename">
+                                <h3>McVeggi Burger</h3>
+                                <h4>McDonald's</h4>
+                            </div>
+                            <div class="summary">
+                                <p>
+                                    A delectable patty made of green goodness, potatoes, peas, carrots and selection of Indian spices.
+                                </p>
+                            </div>
                         </div>
                     </div>
+                    <div class="col-md-4">
+                        <div class="feature-box">
+                            <div class="feature-img">
+                                <img
+                                    src="https://www.whiskaffair.com/wp-content/uploads/2014/02/Shahi-Paneer-5-480x270.jpg">
+                            </div>
+                            <span class="price">165 INR</span> &nbsp
+                            <span class="ratings">
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+                                <i class="fa fa-star" aria-hidden="true"></i>
+    
+                            </span>
+                            <div class="placename">
+                                <h3>Shahi Paneer</h3>
+                                <h4>Taj Family Restaurant</h4>
+                            </div>
+                            <div class="summary">
+                                <p>
+                                    Shahi paneer is a preparation of paneer,
+                                    consisting of a thick gravy of cream, tomatoes and Indian spices.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+    
                 </div>
-
             </div>
-        </div>
-    </section>
-
-
-
+        </section>
     <section class="feedback">
         <div class="container">
             <div class="row">
@@ -990,7 +986,7 @@
         </div>
     </section>
 
-    <section class="features1">
+    <section class="features1" id="menubox">
 
         <div class="container">
             <div class="row">
