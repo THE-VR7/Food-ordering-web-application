@@ -1057,6 +1057,27 @@
         .figure-caption:last-child{
             margin-top: 0px;
         }
+        .cart-btn {
+            position: absolute;
+            width: 70px;
+            height: 59px;
+            margin-left: 40%;
+            margin-top: 16%;
+            background-image: linear-gradient(#00ff7e, #1f3d90);
+            font-size: 15px;
+            border: 0 !important;
+            color: white !important;
+            padding: 2px 10px 7px 10px !important;
+            border-radius: 30px !important;
+            box-shadow: none !important;
+            transition: all 0.8s ease-in-out;
+        transform: translate(300%, 300%); 
+
+        }
+        .figure:hover .cart-btn {
+
+        transform: translate(0, 0); 
+        }
         .block11 {
             margin-top: 10%;
             height: 200px;
@@ -1447,9 +1468,10 @@
                             </div>
                         </div>
                         <div id="pizza">
-                            <div class="row">
+                            <div class="row">                                                       
                                 <div class="col-5 col-md-5" id="img11">
                                     <figure class="figure">
+                                        <button class="cart-btn" value="Order Now" onclick="show_cart('Indi Tandoori Pizza','Dominos',450)">Order Now</button>
                                         <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/IndianTandooriPaneer.jpg"
                                             class="figure-img img-fluid rounded">
                                         <figcaption class="figure-caption"><span id="cap111">Indi Tandoori</span></figcaption>
@@ -1458,6 +1480,7 @@
                                 </div>
                                 <div class="col-5 col-md-5" id="img22">
                                     <figure class="figure">
+                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Peppp Paneer Pizza','Dominos',395)">Order Now</button>
                                         <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/peppypaneer.png"
                                             class="figure-img img-fluid rounded">
                                         <figcaption class="figure-caption" id="cap121">Peppy Paneer</figcaption>
@@ -1468,6 +1491,7 @@
                             <div class="row">
                                 <div class="col-5 col-md-5" id="img33">
                                     <figure class="figure">
+                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Veg Extravaganza Pizza','Dominos',450)">Order Now</button>
                                         <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/vegextra.png"
                                             class="figure-img img-fluid rounded">
                                         <figcaption class="figure-caption" id="cap131">Veg Extravaganza</figcaption>
@@ -1476,6 +1500,7 @@
                                 </div>
                                 <div class="col-5 col-md-5" id="img44">
                                     <figure class="figure">
+                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Mexican Green Wave Pizza','Dominos',395)">Order Now</button>
                                         <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/mexgreen.png"
                                             class="figure-img img-fluid rounded">
                                         <figcaption class="figure-caption" id="cap141">Mexican Green Wave</figcaption>
@@ -1488,6 +1513,7 @@
                             <div class="row">
                                 <div class="col-5 col-md-5" id="img11">
                                     <figure class="figure">
+                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Mc Aloo Tikki Burger','MacDonalds',48)">Order Now</button>
                                         <img src="https://i.ytimg.com/vi/q7Idojp5ZY8/maxresdefault.jpg"
                                             class="figure-img img-fluid rounded">
                                         <figcaption class="figure-caption" id="211">Mc Aloo Tikki</figcaption>
@@ -1496,6 +1522,7 @@
                                 </div>
                                 <div class="col-5 col-md-5" id="img22">
                                     <figure class="figure">
+                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Mexican Mc Aloo Tikki','MacDonalds',55)">Order Now</button>
                                         <img src="https://i1.wp.com/files.hungryforever.com/wp-content/uploads/2016/07/10202927/McDonalds-Featured.jpg?resize=1075%2C605&ssl=1"
                                             class="figure-img img-fluid rounded">
                                         <figcaption class="figure-caption" id="221">Mexican Mc Aloo Tikki</figcaption>
@@ -1506,6 +1533,7 @@
                             <div class="row">
                                 <div class="col-5 col-md-5" id="img33">
                                     <figure class="figure">
+                                            <button class="cart-btn" value="Order Now" onclick="show_cart('American Cheese Burger','MacDonalds',121)">Order Now</button>
                                         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvDfrD9Or8ap6NcGJ64GhW6xdzl0o0elqArC-PJ670a9-6dFFBlg&s"
                                             class="figure-img img-fluid rounded">
                                         <figcaption class="figure-caption" id="231">American Cheese</figcaption>
@@ -1514,6 +1542,7 @@
                                 </div>
                                 <div class="col-5 col-md-5" id="img44">
                                     <figure class="figure">
+                                            <button class="cart-btn" value="Order Now" onclick="show_cart('McVeggi Burger','MacDonalds',107)">Order Now</button>
                                         <img src="https://glamadelaide.com.au/wp-content/uploads/2019/04/McDonalds_Veggie_Burger.png"
                                             class="figure-img img-fluid rounded">
                                         <figcaption class="figure-caption" id="241">McVeggi</figcaption>
@@ -1526,6 +1555,7 @@
                             <div class="row">
                                 <div class="col-5 col-md-5" id="img11">
                                     <figure class="figure">
+                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Paneer Do pyaza','Agrawal Bhojanalay',175)">Order Now</button>
                                         <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Paneer%20Do%20Pyaza.jpg"
                                             class="figure-img img-fluid rounded">
                                         <figcaption class="figure-caption" id="311">Paneer Do Pyaza</figcaption>
@@ -1534,6 +1564,7 @@
                                 </div>
                                 <div class="col-5 col-md-5" id="img22">
                                     <figure class="figure">
+                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Mattar Paneer','Taj Family Restaurant',120)">Order Now</button>
                                         <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Mattar%20Paneer.jpg"
                                             class="figure-img img-fluid rounded">
                                         <figcaption class="figure-caption" id="321">Mattar Paneer</figcaption>
@@ -1544,6 +1575,7 @@
                             <div class="row">
                                 <div class="col-5 col-md-5" id="img33">
                                     <figure class="figure">
+                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Kadai Paneer','Food Hut Restaurant',155)">Order Now</button>
                                         <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Kadai%20Paneer.jpg"
                                             class="figure-img img-fluid rounded">
                                         <figcaption class="figure-caption" id="331">Kadai Paneer</figcaption>
@@ -1552,6 +1584,7 @@
                                 </div>
                                 <div class="col-5 col-md-5" id="img44">
                                     <figure class="figure">
+                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Shahi Paneer','Shankar Foods',165)">Order Now</button>
                                         <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Shahi%20Paneer.jpg"
                                             class="figure-img img-fluid rounded">
                                         <figcaption class="figure-caption" id="341">Shahi Paneer</figcaption>
@@ -1564,6 +1597,7 @@
                             <div class="row">
                                 <div class="col-5 col-md-5" id="img11">
                                     <figure class="figure">
+                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Fresh Mango Ice Cream','Baskin Robbins',69)">Order Now</button>
                                         <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Fresh%20Fruit%20Mango%20Ice%20Cream.jpg"
                                             class="figure-img img-fluid rounded">
                                         <figcaption class="figure-caption" id="411">Fresh Mango</figcaption>
@@ -1572,6 +1606,7 @@
                                 </div>
                                 <div class="col-5 col-md-5" id="img22">
                                     <figure class="figure">
+                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Fresh Coconut Ice Cream','Baskin Robbins',89)">Order Now</button>
                                         <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Coconut%20Ice%20cream.jpg"
                                             class="figure-img img-fluid rounded">
                                         <figcaption class="figure-caption" id="421">Fresh Coconut</figcaption>
@@ -1582,6 +1617,7 @@
                             <div class="row">
                                 <div class="col-5 col-md-5" id="img33">
                                     <figure class="figure">
+                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Straw Berry Ice cream','Baskin Robbins',69)">Order Now</button>
                                         <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/StrawBerry%20Ice%20cream.jpg"
                                             class="figure-img img-fluid rounded">
                                         <figcaption class="figure-caption" id="431">Straw Berry</figcaption>
@@ -1590,6 +1626,7 @@
                                 </div>
                                 <div class="col-5 col-md-5" id="img44">
                                     <figure class="figure">
+                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Kesar Pasta Ice Cream','Baskin Robbins',79)">Order Now</button>
                                         <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Kesar%20Pasta%20Ice%20cream.jpg"
                                             class="figure-img img-fluid rounded">
                                         <figcaption class="figure-caption" id="441">Kesar Pasta</figcaption>
@@ -1738,6 +1775,9 @@
         </section>    
    
     <script>
+        function show_cart(x,y,z){
+            alert("Login Or Sign Up to buy this Food Item.");
+        }
         function disableScroll() { 
             // Get the current page scroll position 
             scrollTop =  
