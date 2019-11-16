@@ -1343,7 +1343,7 @@
                 <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/sricon.png"
                     id="icon">
                 <input type="text" class="form-control" placeholder="Enter the type of Food">
-                <button type="submit" class="input-group-text btn">Search</button>
+                <button type="submit" class="input-group-text btn"> <a href="#menubox" id="search123" onclick="searc()" style="color: white;">Search</a></button>
             </form>
         </div>
     </section>
@@ -1502,40 +1502,41 @@
             </form>
         </div>
     </section>
+   
     <section class="features1" id="menubox">
+
         <div class="container">
             <div class="row">
                 <div class="col-12 col-md-4">
-                    <div class="row animatedParent animateOnce">
-                        <div class="col-4 col-md-5 animated rollIn box data-id='1'">
+                    <div class="row">
+                        <div class="col-4 col-md-5">
                             <h4 id="one">Our Menu</h4>
                         </div>
-                        <div class="col-8 col-md-7 dotted animated lightSpeedInRight box data-id='2 delay-250">
+                        <div class="col-8 col-md-7 dotted">
                             <hr id="lin">
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-12 col-md-12">
-                            <div class="list-group list-group-flush animatedParent animateOnce">
+                            <div class="list-group list-group-flush">
                                 <a onclick="show_pizza()" id="pizzaid"
-                                    class="list-group-item list-group-item-action animated fadeInDown box delay-500 slow">Pizza</a>
+                                    class="list-group-item list-group-item-action">Pizza</a>
                                 <a onclick="show_burger()" id="burgerid"
-                                    class="list-group-item list-group-item-action animated fadeInDown box delay-750 slow">Burger</a>
+                                    class="list-group-item list-group-item-action">Burger</a>
                                 <a onclick="show_paneer()" id="paneerid"
-                                    class="list-group-item list-group-item-action animated fadeInDown box delay-1000 slow">Paneer</a>
+                                    class="list-group-item list-group-item-action">Paneer</a>
                                 <a onclick="show_icecream()" id="icecreamid"
-                                    class="list-group-item list-group-item-action animated fadeInDown box delay-1250 slow">Ice
-                                    Cream</a>
+                                    class="list-group-item list-group-item-action">Ice Cream</a>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-8">
-                    <div class="row animatedParent animateOnce">
-                        <div class="col-5 col-md-5 animated rollIn box delay-1500">
+                    <div class="row">
+                        <div class="col-5 col-md-5">
                             <h4 id="one">Top Cuisines</h4>
                         </div>
-                        <div class="col-7 col-md-7 dotted animated lightSpeedInRight box delay-2500">
+                        <div class="col-7 col-md-7 dotted">
                             <hr id="lin">
                         </div>
                     </div>
@@ -1811,6 +1812,26 @@
             document.getElementById("icecreamid").style = " background-color: red;color: white;font-size: 25px;border-radius: 5px;"
             document.getElementById("burgerid").style = " background-color: white;color: black;font-size: 25px;border-radius: 5px;"
 
+        }
+        function searc() {
+            console.log("0")
+            x = document.getElementById("myText12").value;
+            if (x.toLowerCase() == "pizza") {
+                console.log("1")
+                show_pizza()
+            }
+            else if (x.toLowerCase() == "burger") {
+                show_burger()
+            }
+            else if (x.toLowerCase() == "paneer") {
+                show_paneer()
+            }
+            else if (x.toLowerCase() == "ice cream" || x.toLowerCase() == "icecream") {
+                show_icecream()
+            }
+            else {
+                alert("Sorry We don't have this item")
+            }
         }
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
