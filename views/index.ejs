@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="html2">
 
 <head>
     <meta charset="UTF-8">
@@ -392,56 +392,36 @@
             border-bottom: 1px solid rgba(0, 132, 255, 0.384);
             background-color: transparent;
         }
-
-        .feedback {
+/* FeedBack CSS Starts from here */
+.feedback {
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('http://getwallpapers.com/wallpaper/full/3/6/f/1289761-popular-farm-wallpaper-1920x1080-images.jpg#.XZ4vxGOkrlU.link');
-            padding-top: 85px;
+            padding: 80px 0;
             background-attachment: fixed;
-            padding: 100px 0;
+            margin-top: 40%;
+            display: none;
         }
-
         .h1h1 {
             font-family: cursive;
             font-weight: 300;
             font-size: 60px;
             color: white;
-            padding-left: 160px;
+            text-align: center;
         }
-
-        .h4h4 {
-            font-family: cursive;
-            font-weight: 400;
-            font-size: 20px;
-            color: white;
-            line-height: 1.5;
-            padding-left: 450px;
-        }
-
         input:focus~label,
         textarea:focus~label,
-        input:valid~label,
-        textarea:valid~label {
+        input:valid~label
+        {
             font-size: 0.75em;
             color: gray;
             top: -5px;
             -webkit-transition: all 0.225s ease;
             transition: all 0.225s ease;
         }
-
         .styled-input {
-            float: left;
-            width: 293px;
+            width: 80%;
             margin: 1rem 0;
-            position: relative;
             border-radius: 4px;
         }
-
-        @media only screen and (max-width: 768px) {
-            .styled-input {
-                width: 100%;
-            }
-        }
-
         .styled-input label {
             color: #999;
             padding: 1.3rem 30px 1rem 30px;
@@ -452,14 +432,8 @@
             transition: all 0.25s ease;
             pointer-events: none;
         }
-
-        .styled-input.wide {
-            width: 650px;
-            max-width: 100%;
-        }
-
-        input,
-        textarea {
+        .feedback input,
+        .feedback textarea {
             padding: 30px;
             border: 0;
             width: 100%;
@@ -468,30 +442,11 @@
             color: black;
             border-radius: 4px;
         }
-
-        input:focus,
-        textarea:focus {
+        .feedback input:focus,.feedback textarea:focus {
+            background-color: white;
             outline: 0;
+            border: 0;
         }
-
-        input:focus~span,
-        textarea:focus~span {
-            width: 100%;
-            -webkit-transition: all 0.075s ease;
-            transition: all 0.075s ease;
-        }
-
-        textarea {
-            width: 100%;
-            min-height: 15em;
-        }
-
-        .input-container {
-            width: 650px;
-            max-width: 100%;
-            margin: 20px auto 25px auto;
-        }
-
         .submit-btn {
             width: 130px;
             padding: 8px 0;
@@ -499,12 +454,15 @@
             border: 2px solid white;
             border-radius: 50px;
             background: transparent;
+            font-size: larger;
             color: white;
             margin-top: 20px;
             text-align: center;
-            margin-left: 520px;
         }
-
+        .submit-btn:hover {
+            transform: scale(1.1);
+            transition-duration: 0.5s;
+        }
         .anima1 {
             width: 100%;
             position: relative;
@@ -1456,53 +1414,6 @@
             </div>
         </div>
     </section>
-
-
-
-
-    <section class="feedback">
-        <div class="container">
-            <div class="row">
-                <h1 class="h1h1">Share your problems with us</h1>
-            </div>
-            <div class="row">
-                <h4 class="h4h4" style="text-align:center">We'd love to hear from you!</h4>
-            </div>
-            <form method="POST" action="/">
-                <div class="row input-container">
-                    <div class="col-xs-12">
-                        <div class="styled-input wide">
-                            <input type="text" name="Name" required />
-                            <label>Name</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="styled-input">
-                            <input type="email" name="email" required />
-                            <label>Email</label>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-sm-12">
-                        <div class="styled-input" style="float:right;">
-                            <input type="text" name="phonenumber" required />
-                            <label>Phone Number</label>
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <div class="styled-input wide">
-                            <textarea name="text" required></textarea>
-                            <label>Message</label>
-                        </div>
-                    </div>
-                    <div class="col-xs-12">
-                        <button type="submit" class="btnmsg">Send message</butto>
-                    </div>
-
-                </div>
-            </form>
-        </div>
-    </section>
-   
     <section class="features1" id="menubox">
 
         <div class="container">
@@ -1769,7 +1680,83 @@
             </p>
         </div>
     </section>
+
+    <section class="feedback" id="feedback1">
+            <div class="container">
+                <h1 class="h1h1">Share your problems with us</h1>
+                <br>
+                <form method="POST" id="feedform">
+                    <div class="row">
+                        <div class="col-md-4 col-12 offset-2">
+                            <div class="styled-input">
+                                <input type="text" name="Name" required />
+                                <label>Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-12">
+                            <div class="styled-input">
+                                <input type="email" name="email" required />
+                                <label>Email</label>
+                            </div>
+                        </div>
+                    </div> 
+                        <div class="row">
+                        <div class="col-md-7 col-sm-12 offset-3">
+                            <div class="styled-input">
+                                <input type="text" name="phonenumber" required />
+                                <label>Phone Number</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-9 offset-2">
+                            <div class="styled-input">
+                                <textarea name="text" id="textmsg" cols="2" rows="2" placeholder="Enter Your Message here"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">    
+                        <div class="col-xs-12 col-md-3 offset-5">
+                            <button onclick="location.href='#img';disable_feedback();" type="submit"  class="submit-btn">Send message</butto>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>    
+   
     <script>
+        function disableScroll() { 
+            // Get the current page scroll position 
+            scrollTop =  
+              window.pageYOffset || document.documentElement.scrollTop; 
+            scrollLeft =  
+              window.pageXOffset || document.documentElement.scrollLeft, 
+  
+                // if any scroll is attempted, 
+                // set this to the previous value 
+                window.onscroll = function() { 
+                    window.scrollTo(scrollLeft, scrollTop); 
+                }; 
+        } 
+        function enableScroll() { 
+            window.onscroll = function() {}; 
+        } 
+        function show_feedback()
+        {
+            document.getElementById("html2").style.scrollBehavior = "unset";
+            document.getElementById("feedback1").style.display = "block";
+            location.href='#feedform';
+            document.getElementById("navbar").style.display = "none";
+            disableScroll();
+        }
+        function disable_feedback()
+        {
+            document.getElementById("feedback1").style.display = "none";
+            document.getElementById("navbar").style.display = "block";
+            document.getElementById("html2").style.scrollBehavior = "smooth";
+            enableScroll();
+
+        }
         function show_pizza() {
             document.getElementById("pizza").style.display = "block";
             document.getElementById("pizzaid").style = " background-color: red;color: white;font-size: 26px;border-radius: 5px;"
