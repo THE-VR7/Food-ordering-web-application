@@ -704,29 +704,24 @@
 
         .figure-img {
             width: 100%;
-            height: 178px;
+            height: 112px;
         }
 
         .figure-caption {
             padding: 0;
             margin-top: -8px;
-            height: 42px;
-            text-align: center;
             font-family: cursive;
             overflow: hidden;
             font-size: 24px;
+            text-align: center;
             font-style: normal;
             background-color: rgba(169, 169, 169, 0.301);
             color: #515151;
             border-radius: 2px;
         }
-
-        .figure-caption:hover {
-            color: green;
-            cursor: pointer;
-            font-size: 25px;
+        .figure-caption:last-child{
+            margin-top: 0px;
         }
-
         .block11 {
             margin-top: 10%;
             height: 200px;
@@ -1019,183 +1014,199 @@
 
     <section class="features1" id="menubox">
 
-        <div class="container">
-            <div class="row">
-                <div class="col-12 col-md-4">
-                    <div class="row">
-                        <div class="col-4 col-md-5">
-                            <h4 id="one">Our Menu</h4>
-                        </div>
-                        <div class="col-8 col-md-7 dotted">
-                            <hr id="lin">
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-12 col-md-12">
-                            <div class="list-group list-group-flush">
-                                <a onclick="show_pizza()" id="pizzaid"
-                                    class="list-group-item list-group-item-action">Pizza</a>
-                                <a onclick="show_burger()" id="burgerid"
-                                    class="list-group-item list-group-item-action">Burger</a>
-                                <a onclick="show_paneer()" id="paneerid"
-                                    class="list-group-item list-group-item-action">Paneer</a>
-                                <a onclick="show_icecream()" id="icecreamid"
-                                    class="list-group-item list-group-item-action">Ice Cream</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-8">
-                    <div class="row">
-                        <div class="col-5 col-md-5">
-                            <h4 id="one">Top Cuisines</h4>
-                        </div>
-                        <div class="col-7 col-md-7 dotted">
-                            <hr id="lin">
-                        </div>
-                    </div>
-                    <div id="pizza">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4">
                         <div class="row">
-                            <div class="col-5 col-md-5" id="img11">
-                                <figure class="figure">
-                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/IndianTandooriPaneer.jpg"
-                                        class="figure-img img-fluid rounded">
-                                    <figcaption class="figure-caption">Indi Tandoori</figcaption>
-                                </figure>
+                            <div class="col-4 col-md-5">
+                                <h4 id="one">Our Menu</h4>
                             </div>
-                            <div class="col-5 col-md-5" id="img22">
-                                <figure class="figure">
-                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/peppypaneer.png"
-                                        class="figure-img img-fluid rounded">
-                                    <figcaption class="figure-caption">Peppy Paneer</figcaption>
-                                </figure>
+                            <div class="col-8 col-md-7 dotted">
+                                <hr id="lin">
                             </div>
                         </div>
                         <div class="row">
-                            <div class="col-5 col-md-5" id="img33">
-                                <figure class="figure">
-                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/vegextra.png"
-                                        class="figure-img img-fluid rounded">
-                                    <figcaption class="figure-caption">Veg Extravaganza</figcaption>
-                                </figure>
-                            </div>
-                            <div class="col-5 col-md-5" id="img44">
-                                <figure class="figure">
-                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/mexgreen.png"
-                                        class="figure-img img-fluid rounded">
-                                    <figcaption class="figure-caption">Mexican Green Wave</figcaption>
-                                </figure>
+                            <div class="col-12 col-md-12">
+                                <div class="list-group list-group-flush">
+                                    <a onclick="show_pizza()" id="pizzaid"
+                                        class="list-group-item list-group-item-action">Pizza</a>
+                                    <a onclick="show_burger()" id="burgerid"
+                                        class="list-group-item list-group-item-action">Burger</a>
+                                    <a onclick="show_paneer()" id="paneerid"
+                                        class="list-group-item list-group-item-action">Paneer</a>
+                                    <a onclick="show_icecream()" id="icecreamid"
+                                        class="list-group-item list-group-item-action">Ice Cream</a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div id="burger">
+                    <div class="col-12 col-md-8">
                         <div class="row">
-                            <div class="col-5 col-md-5" id="img11">
-                                <figure class="figure">
-                                    <img src="https://i.ytimg.com/vi/q7Idojp5ZY8/maxresdefault.jpg"
-                                        class="figure-img img-fluid rounded">
-                                    <figcaption class="figure-caption">Mc Aloo Tikki</figcaption>
-                                </figure>
+                            <div class="col-5 col-md-5">
+                                <h4 id="one">Top Cuisines</h4>
                             </div>
-                            <div class="col-5 col-md-5" id="img22">
-                                <figure class="figure">
-                                    <img src="https://i1.wp.com/files.hungryforever.com/wp-content/uploads/2016/07/10202927/McDonalds-Featured.jpg?resize=1075%2C605&ssl=1"
-                                        class="figure-img img-fluid rounded">
-                                    <figcaption class="figure-caption">Mexican Mc Aloo Tikki</figcaption>
-                                </figure>
+                            <div class="col-7 col-md-7 dotted">
+                                <hr id="lin">
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-5 col-md-5" id="img33">
-                                <figure class="figure">
-                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvDfrD9Or8ap6NcGJ64GhW6xdzl0o0elqArC-PJ670a9-6dFFBlg&s"
-                                        class="figure-img img-fluid rounded">
-                                    <figcaption class="figure-caption">American Cheese</figcaption>
-                                </figure>
+                        <div id="pizza">
+                            <div class="row">
+                                <div class="col-5 col-md-5" id="img11">
+                                    <figure class="figure">
+                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/IndianTandooriPaneer.jpg"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption class="figure-caption"><span id="cap111">Indi Tandoori</span></figcaption>
+                                        <figcaption class="figure-caption"><span id="cap112">Dominos</span><br><span id="cap113">&#8377 450</span></figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-5 col-md-5" id="img22">
+                                    <figure class="figure">
+                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/peppypaneer.png"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption class="figure-caption" id="cap121">Peppy Paneer</figcaption>
+                                        <figcaption class="figure-caption"><span id="cap122">Dominos</span><br><span id="cap123">&#8377 395</span></figcaption>
+                                    </figure>
+                                </div>
                             </div>
-                            <div class="col-5 col-md-5" id="img44">
-                                <figure class="figure">
-                                    <img src="https://glamadelaide.com.au/wp-content/uploads/2019/04/McDonalds_Veggie_Burger.png"
-                                        class="figure-img img-fluid rounded">
-                                    <figcaption class="figure-caption">McVeggi</figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="paneer">
-                        <div class="row">
-                            <div class="col-5 col-md-5" id="img11">
-                                <figure class="figure">
-                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Paneer%20Do%20Pyaza.jpg"
-                                        class="figure-img img-fluid rounded">
-                                    <figcaption class="figure-caption">Paneer Do Pyaza</figcaption>
-                                </figure>
-                            </div>
-                            <div class="col-5 col-md-5" id="img22">
-                                <figure class="figure">
-                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Mattar%20Paneer.jpg"
-                                        class="figure-img img-fluid rounded">
-                                    <figcaption class="figure-caption">Mattar Paneer</figcaption>
-                                </figure>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-5 col-md-5" id="img33">
-                                <figure class="figure">
-                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Kadai%20Paneer.jpg"
-                                        class="figure-img img-fluid rounded">
-                                    <figcaption class="figure-caption">Kadai Paneer</figcaption>
-                                </figure>
-                            </div>
-                            <div class="col-5 col-md-5" id="img44">
-                                <figure class="figure">
-                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Shahi%20Paneer.jpg"
-                                        class="figure-img img-fluid rounded">
-                                    <figcaption class="figure-caption">Shahi Paneer</figcaption>
-                                </figure>
+                            <div class="row">
+                                <div class="col-5 col-md-5" id="img33">
+                                    <figure class="figure">
+                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/vegextra.png"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption class="figure-caption" id="cap131">Veg Extravaganza</figcaption>
+                                        <figcaption class="figure-caption"><span id="cap132">Dominos</span><br><span id="cap133">&#8377 450</span></figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-5 col-md-5" id="img44">
+                                    <figure class="figure">
+                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/mexgreen.png"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption class="figure-caption" id="cap141">Mexican Green Wave</figcaption>
+                                        <figcaption class="figure-caption"><span id="cap142">Dominos</span><br><span id="cap143">&#8377 395</span></figcaption>
+                                    </figure>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div id="icecream">
-                        <div class="row">
-                            <div class="col-5 col-md-5" id="img11">
-                                <figure class="figure">
-                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Fresh%20Fruit%20Mango%20Ice%20Cream.jpg"
-                                        class="figure-img img-fluid rounded">
-                                    <figcaption class="figure-caption">Fresh Mango</figcaption>
-                                </figure>
+                        <div id="burger">
+                            <div class="row">
+                                <div class="col-5 col-md-5" id="img11">
+                                    <figure class="figure">
+                                        <img src="https://i.ytimg.com/vi/q7Idojp5ZY8/maxresdefault.jpg"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption class="figure-caption" id="211">Mc Aloo Tikki</figcaption>
+                                        <figcaption class="figure-caption"><span id="cap212">MacDonalds'</span><br><span id="cap213">&#8377 48</span></figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-5 col-md-5" id="img22">
+                                    <figure class="figure">
+                                        <img src="https://i1.wp.com/files.hungryforever.com/wp-content/uploads/2016/07/10202927/McDonalds-Featured.jpg?resize=1075%2C605&ssl=1"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption class="figure-caption" id="221">Mexican Mc Aloo Tikki</figcaption>
+                                        <figcaption class="figure-caption"><span id="cap222">MacDonalds'</span><br><span id="cap223">&#8377 55</span></figcaption>
+                                    </figure>
+                                </div>
                             </div>
-                            <div class="col-5 col-md-5" id="img22">
-                                <figure class="figure">
-                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Coconut%20Ice%20cream.jpg"
-                                        class="figure-img img-fluid rounded">
-                                    <figcaption class="figure-caption">Fresh Coconut</figcaption>
-                                </figure>
+                            <div class="row">
+                                <div class="col-5 col-md-5" id="img33">
+                                    <figure class="figure">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvDfrD9Or8ap6NcGJ64GhW6xdzl0o0elqArC-PJ670a9-6dFFBlg&s"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption class="figure-caption" id="231">American Cheese</figcaption>
+                                        <figcaption class="figure-caption"><span id="cap232">MacDonalds'</span><br><span id="cap233">&#8377 121</span></figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-5 col-md-5" id="img44">
+                                    <figure class="figure">
+                                        <img src="https://glamadelaide.com.au/wp-content/uploads/2019/04/McDonalds_Veggie_Burger.png"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption class="figure-caption" id="241">McVeggi</figcaption>
+                                        <figcaption class="figure-caption"><span id="cap242">MacDonalds'</span><br><span id="cap243">&#8377 107</span></figcaption>
+                                    </figure>
+                                </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-5 col-md-5" id="img33">
-                                <figure class="figure">
-                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/StrawBerry%20Ice%20cream.jpg"
-                                        class="figure-img img-fluid rounded">
-                                    <figcaption class="figure-caption">Straw Berry</figcaption>
-                                </figure>
+                        <div id="paneer">
+                            <div class="row">
+                                <div class="col-5 col-md-5" id="img11">
+                                    <figure class="figure">
+                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Paneer%20Do%20Pyaza.jpg"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption class="figure-caption" id="311">Paneer Do Pyaza</figcaption>
+                                        <figcaption class="figure-caption"><span id="cap312">Agrawal Bhojanalay</span><br><span id="cap313">&#8377 175</span></figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-5 col-md-5" id="img22">
+                                    <figure class="figure">
+                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Mattar%20Paneer.jpg"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption class="figure-caption" id="321">Mattar Paneer</figcaption>
+                                        <figcaption class="figure-caption"><span id="cap322">Taj Family Restaurant</span><br><span id="cap323">&#8377 120</span></figcaption>
+                                    </figure>
+                                </div>
                             </div>
-                            <div class="col-5 col-md-5" id="img44">
-                                <figure class="figure">
-                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Kesar%20Pasta%20Ice%20cream.jpg"
-                                        class="figure-img img-fluid rounded">
-                                    <figcaption class="figure-caption">Kesar Pasta</figcaption>
-                                </figure>
+                            <div class="row">
+                                <div class="col-5 col-md-5" id="img33">
+                                    <figure class="figure">
+                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Kadai%20Paneer.jpg"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption class="figure-caption" id="331">Kadai Paneer</figcaption>
+                                        <figcaption class="figure-caption"><span id="cap332">Food Hut Restaurant</span><br><span id="cap333">&#8377 155</span></figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-5 col-md-5" id="img44">
+                                    <figure class="figure">
+                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Shahi%20Paneer.jpg"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption class="figure-caption" id="341">Shahi Paneer</figcaption>
+                                        <figcaption class="figure-caption"><span id="cap342">Shankar Foods</span><br><span id="cap343">&#8377 165</span></figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="icecream">
+                            <div class="row">
+                                <div class="col-5 col-md-5" id="img11">
+                                    <figure class="figure">
+                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Fresh%20Fruit%20Mango%20Ice%20Cream.jpg"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption class="figure-caption" id="411">Fresh Mango</figcaption>
+                                        <figcaption class="figure-caption"><span id="cap412">Baskin Robbins</span><br><span id="cap413">&#8377 69</span></figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-5 col-md-5" id="img22">
+                                    <figure class="figure">
+                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Coconut%20Ice%20cream.jpg"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption class="figure-caption" id="421">Fresh Coconut</figcaption>
+                                        <figcaption class="figure-caption"><span id="cap422">Baskin Robbins</span><br><span id="cap423">&#8377 89</span></figcaption>
+                                    </figure>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-5 col-md-5" id="img33">
+                                    <figure class="figure">
+                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/StrawBerry%20Ice%20cream.jpg"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption class="figure-caption" id="431">Straw Berry</figcaption>
+                                        <figcaption class="figure-caption"><span id="cap432">Baskin Robbins</span><br><span id="cap433">&#8377 69</span></figcaption>
+                                    </figure>
+                                </div>
+                                <div class="col-5 col-md-5" id="img44">
+                                    <figure class="figure">
+                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Kesar%20Pasta%20Ice%20cream.jpg"
+                                            class="figure-img img-fluid rounded">
+                                        <figcaption class="figure-caption" id="441">Kesar Pasta</figcaption>
+                                        <figcaption class="figure-caption"><span id="cap442">Baskin Robbins</span><br><span id="cap443">&#8377 79</span></figcaption>
+                                    </figure>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-
-
-    </section>
+    
+    
+        </section>
     <section class="img1123">
         <div class="container-fluid animatedParent animateOnce" id="pic22">
             <div class="row slow animated fadeIn box">
