@@ -1386,11 +1386,11 @@
         <div class="container">
             <h1 class="h1h1">Share your problems with us</h1>
             <br>
-            <form method="POST" id="feedform">
+            <form method="POST" id="feedform" action="/in">
                 <div class="row">
                     <div class="col-md-4 col-12 offset-2">
                         <div class="styled-input">
-                            <input type="text" name="Name" required />
+                            <input type="text" name="Name" required/>
                             <label>Name</label>
                         </div>
                     </div>
@@ -1418,7 +1418,7 @@
                 </div>
                 <div class="row">    
                     <div class="col-xs-12 col-md-3 offset-5">
-                        <button onclick="location.href='#img';disable_feedback();" type="submit"  class="submit-btn">Send message</butto>
+                        <button type="submit"  class="submit-btn">Send message</butto>
                     </div>
                 </div>
             </form>
@@ -1555,14 +1555,6 @@
             location.href='#feedform';
             document.getElementById("navbar").style.display = "none";
             disableScroll();
-        }
-        function disable_feedback()
-        {
-            document.getElementById("feedback1").style.display = "none";
-            document.getElementById("navbar").style.display = "block";
-            document.getElementById("html2").style.scrollBehavior = "smooth";
-            enableScroll();
-
         }
         function show_pizza() {
             console.log("2")

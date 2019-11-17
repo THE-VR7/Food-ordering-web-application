@@ -1041,6 +1041,11 @@
             width: 100%;
             height: 112px;
         }
+        
+        .figure {
+            position: relative;
+            overflow: hidden;
+        }
 
         .figure-caption {
             padding: 0;
@@ -1714,7 +1719,7 @@
             </ul>
             <p style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 20px;" id="fdbk">Give
                 Your Valuable Feedback</p>
-            <button onclick="location.href='#menubox'" id="fdbkbtn">Click Me</button>
+            <button onclick="show_feedback()" id="fdbkbtn">Click Me</button>
         </div>
         <div class="gtch">
 
@@ -1735,7 +1740,7 @@
             <div class="container">
                 <h1 class="h1h1">Share your problems with us</h1>
                 <br>
-                <form method="POST" id="feedform">
+                <form method="POST" id="feedform" action="/">
                     <div class="row">
                         <div class="col-md-4 col-12 offset-2">
                             <div class="styled-input">
@@ -1767,7 +1772,7 @@
                     </div>
                     <div class="row">    
                         <div class="col-xs-12 col-md-3 offset-5">
-                            <button onclick="location.href='#img';disable_feedback();" type="submit"  class="submit-btn">Send message</butto>
+                            <button type="submit"  class="submit-btn">Send message</butto>
                         </div>
                     </div>
                 </form>
@@ -1776,7 +1781,9 @@
    
     <script>
         function show_cart(x,y,z){
-            alert("Login Or Sign Up to buy this Food Item.");
+            alert("You need to Signup or Login to Order this item")
+            document.getElementById('id01').style.display='block'
+            $('#id01').css("width:auto; cursor: pointer;")
         }
         function disableScroll() { 
             // Get the current page scroll position 
@@ -1801,14 +1808,6 @@
             location.href='#feedform';
             document.getElementById("navbar").style.display = "none";
             disableScroll();
-        }
-        function disable_feedback()
-        {
-            document.getElementById("feedback1").style.display = "none";
-            document.getElementById("navbar").style.display = "block";
-            document.getElementById("html2").style.scrollBehavior = "smooth";
-            enableScroll();
-
         }
         function show_pizza() {
             document.getElementById("pizza").style.display = "block";

@@ -42,25 +42,45 @@ passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
-// app.post('/', function(req,res){ 
-//     var Name = req.body.Name; 
-//     var email =req.body.email; 
-//     var phonenumber = req.body.phonenumber; 
-//     var text =req.body.text;
-//     var data = { 
-//         "Name": Name, 
-//         "email":email, 
-//         "phonenumber":phonenumber, 
-//         "text":text 
-//     } 
-// db.collection('details').insert(data,function(err, collection){ 
-//         if (err) throw err; 
-//         console.log("Record inserted Successfully");
+app.post('/', function(req,res){ 
+    var Name = req.body.Name; 
+    var email =req.body.email; 
+    var phonenumber = req.body.phonenumber; 
+    var text =req.body.text;
+    var data = { 
+        "Name": Name, 
+        "email":email, 
+        "phonenumber":phonenumber, 
+        "text":text 
+    } 
+db.collection('details').insert(data,function(err, collection){ 
+        if (err) throw err; 
+        console.log("Record inserted Successfully");
               
-//     }); 
+    }); 
           
-//     return res.redirect('/'); 
-// }) 
+    return res.redirect('/'); 
+})
+
+app.post('/in', function(req,res){ 
+    var Name = req.body.Name; 
+    var email =req.body.email; 
+    var phonenumber = req.body.phonenumber; 
+    var text =req.body.text;
+    var data = { 
+        "Name": Name, 
+        "email":email, 
+        "phonenumber":phonenumber, 
+        "text":text 
+    } 
+db.collection('details').insert(data,function(err, collection){ 
+        if (err) throw err; 
+        console.log("Record inserted Successfully");
+              
+    }); 
+          
+    return res.redirect('/in'); 
+})
 
 app.get("/", function (req, res) {
     res.render("index");
