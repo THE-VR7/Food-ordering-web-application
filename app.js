@@ -108,6 +108,9 @@ app.post("/register", function (req, res) {
 
 app.get("/in",isLoggedIn, function (req, res) {
     console.log(req.user)
+    console.log(req.user.email)
+    console.log(req.user.bio)
+    console.log(req.user.dob)
     res.render("in",{name: req.user.username});
     
     console.log(req.user.username);
@@ -130,6 +133,14 @@ app.get("/logout", function (req, res) {
     req.logout();
     res.redirect("/");
 });
+
+app.get("/in/profile",function(req, res){
+    console.log(req.user)
+    console.log(req.user)
+    console.log(req.user)
+    
+    res.render("profile.ejs",{user: req.user})
+})
 
 
 function isLoggedIn(req, res, next) {
