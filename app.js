@@ -107,6 +107,7 @@ app.post("/register", function (req, res) {
 
 
 app.get("/in",isLoggedIn, function (req, res) {
+    console.log(req.user)
     res.render("in",{name: req.user.username});
     
     console.log(req.user.username);
@@ -114,6 +115,7 @@ app.get("/in",isLoggedIn, function (req, res) {
 app.get("/",isLoggedIn, function (req, res) {
     res.render("in",{name: req.user.username});
 });
+
 
 // middleware
 app.post("/login", passport.authenticate("local", {
@@ -124,6 +126,7 @@ app.post("/login", passport.authenticate("local", {
 });
 
 app.get("/logout", function (req, res) {
+    console.log("1" + +req.user)
     req.logout();
     res.redirect("/");
 });
@@ -140,5 +143,5 @@ const server = http.listen(8081, function () {
     console.log('listening on *:8081');
 });
 
-// module.exports=User;
-// module.exports=mongoose;
+module.exports=User;
+module.exports=mongoose;
