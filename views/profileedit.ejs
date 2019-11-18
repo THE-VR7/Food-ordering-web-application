@@ -106,7 +106,7 @@ input[type=submit]:hover {
 
 <h1 style="text-align: center; font-size: 60px;"> <span id="username">My</span> Profile</h2>
 <div class="container">
-  <form action="/action_page.php">
+  <form action="/in/profileedit" method="POST">
     <div class="row">
       <div class="col-25">
         <label>Full Name</label>
@@ -143,15 +143,11 @@ input[type=submit]:hover {
         <div class="col-75">
             <span id="gender" class="addcon" onclick="show_gender()">Add Gender</span>
             <div class="gender123" id="gender22" style="display: none; width: 100%;">
-            <label class="radio-inline">
-                <input type="radio" name="gender">Male
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="gender">Female
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="gender">Other
-              </label>
+                <input type="radio" id="genderm" name="gender" value="male" />
+                <label for="genderm">Male</label>
+                <input type="radio" id="genderf" name="gender" value="female" />
+                <label for="genderf">Female</label>
+                
             </div>
         </div>
       </div>
@@ -201,7 +197,7 @@ input[type=submit]:hover {
     </div>
     </div>
     <div class="row">
-        <input type="submit" value="Submit">
+        <button type="submit" class="">Submit</button>
     </div>
   </form>
 </div>

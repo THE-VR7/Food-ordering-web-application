@@ -31,6 +31,8 @@ db.once('open', function(callback){
 
 mongoose.set('useNewUrlParser', true);
 mongoose.set('useUnifiedTopology', true);
+mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 
 app.set('view engine', 'ejs');
 //
@@ -136,10 +138,20 @@ app.get("/logout", function (req, res) {
 
 app.get("/in/profile",function(req, res){
     console.log(req.user)
-    console.log(req.user)
-    console.log(req.user)
-    
     res.render("profile.ejs",{user: req.user})
+})
+
+app.get("/in/profileedit",function(req, res){
+    res.render("profileedit",{user: req.user})
+})
+
+app.post("/in/profileedit",function(req, res){
+        User.updateOne({},{$set: {gender: req.body.gender}},{upsert:true})
+        console.log("gender updated")
+        console.log(req.user)
+        console.log(req.body.gender)
+        console.log(req.user.gender)
+    res.redirect("/in/profile")
 })
 
 
