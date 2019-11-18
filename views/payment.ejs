@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Pay Now</title>
+    <style>
+        input[type=text],select{
+            width:100%;
+            padding: 10px 10px;
+            margin: 8px 0px;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+        }
+        input[type=submit]{
+            width:100%;
+            font-size : 25px;
+            padding:8px 8px;
+            margin: 8px 0px;
+            background-color: green;
+            border: none;
+            color: white;
+            border-radius: 6px;
+            
+        }
+        input[type=submit]:hover{
+            background-color:blue;
+            color: white;
+            opacity: 0.7;
+            cursor: pointer;
+        }
+        
+        .details{
+            width: 50%;
+           
+            margin: auto;
+            height: 100px;
+            box-sizing: border-box;
+           
+        }
+
+    </style>
+</head>
+<body>
+<div class="details">
+    <h2>Make A Payment</h2>
+    <h3>Accepted Cards</h3>
+    <div style="font-size: 40px;">
+            <input type="radio" name="gender"  checked><i class="fa fa-cc-visa" style="color:navy;"></i>
+            <input type="radio" name="gender" value="male" ><i class="fa fa-cc-amex" style="color:blue;"></i>
+            <input type="radio" name="gender" value="male" ><i class="fa fa-cc-mastercard" style="color:red;"></i>
+            <input type="radio" name="gender" value="male" ><i class="fa fa-cc-discover" style="color:orange;"></i>
+  
+    </div>
+   
+    <form>
+        Name On Card:</br>
+        <input type="text" name="fname" placeholder="Name On Card"></br>
+        Credit Card Number:</br>
+        <input type="text" name="fname" placeholder="Credit Card Number"></br>
+        Exp Month:</br>
+        <input type="text" name="fname" placeholder=" Exp Month"></br>
+        Exp Year:</br>
+        <input type="text" name="fname" placeholder="Exp Year"></br>
+        CVV:</br>
+        <input type="text" name="fname" placeholder="CVV"></br>
+       <input type="submit" value="Pay" class="btn">
+     </form>
+    
+</div>
+    
+</body>
+</html>
