@@ -45,6 +45,9 @@
         }
     </script>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         html {
             scroll-behavior: smooth;
         }
@@ -144,57 +147,38 @@
         }
 
         .cont1 {
-            width: 90%;
+            width: 100%;
             height: 50%;
-            margin-top: 100px;
-            margin-left: 100px;
-            min-width: 320px;
+            margin-top: 10%;
             position: absolute;
             z-index: 100;
             background-color: transparent;
         }
-
         .rw-wrapper {
             width: 100%;
+            height: 75%;
             position: absolute;
             z-index: 120;
-            margin-top: 100px;
-            margin-left: -670px;
-            padding: 10px;
+            margin-top: 8%;
         }
-
-        .rw-words {
-            width: 100%;
-            height: 100px;
-            perspective: 800px;
-        }
-
-        .rw-words span {
-            position: absolute;
-            width: 100%;
-            opacity: 1;
-            white-space: nowrap;
-            overflow: hidden;
-        }
-
-        .rw-words-1 span {
-            font-size: 60px;
-            margin-left: 5px;
-            line-height: 82%;
+        .rw-words-1 {
+            font-size: 63px;
+            margin-left: 4%;
+            width: 90%;
+            height: 40%;
             animation: rotateWordsFirst 18s linear 0s;
             color: white;
             font-style: italic;
         }
-
-        .rw-words-2 span {
-            margin-top: -20px;
-            margin-left: 57px;
+        .rw-words-2 {
+            width: 60%;
+            height: 30%;
+            margin-top: -1.5%;
+            margin-left: 18%;
             font-size: 45px;
-            text-indent: 5px;
-            color: White;
+            color: white;
             animation: rotateWordsSecond 18s ease-in 0s;
         }
-
         @keyframes rotateWordsFirst {
             0% {
                 opacity: 0;
@@ -252,31 +236,32 @@
         }
 
         #cool {
-            width: 20px;
-            height: 00px;
-            margin-left: 12%;
+            width: 2%;
+            height: 77%;
+            margin-left: 15%;
             border-left: 5px solid rgb(126, 199, 255);
             border-right: 5px solid rgb(126, 199, 255);
-            margin-top: -36px;
+            margin-top: -2.8%;
             animation: grow 3s forwards;
             animation-delay: 2s;
             position: absolute;
             z-index: 253;
             transform-origin: 0 100%;
+            transform: rotateZ(90deg);
         }
-
         #cool1 {
-            width: 20px;
-            height: 00px;
-            margin-left: 86%;
+            width: 2%;
+            height: 78.5%;
+            margin-left: 82%;
             border-left: 5px solid rgb(126, 199, 255);
             border-right: 5px solid rgb(126, 199, 255);
-            margin-top: -15px;
+            margin-top: -1%;
             animation: grow1 3s forwards;
             animation-delay: 2s;
             position: absolute;
             z-index: 253;
             transform-origin: 0 100%;
+            transform: rotateZ(-90deg);
         }
 
         @keyframes grow {
@@ -325,59 +310,77 @@
             }
 
         }
-
+        @media only screen and (max-width: 768px) {
+            .rw-words-1{
+                font-size: 25px;
+                margin-top: 25%;
+            }
+            .rw-words-2{
+                font-size: 20px;
+                margin-top: -10%;
+            }
+            #cool {
+                margin-top: 33%;
+                height: 20%;
+                width: 1%;
+            }
+            #cool1 {
+                margin-top: 35.5%;
+                height: 20%;
+                width: 1%;
+            }
+        }
         .input-group {
-            width: 600px;
-            /* border-top: ;
-            height: 50%; */
+            width: 67%;
             height: 100px;
             position: absolute;
             border-radius: 50px;
             background-color: transparent;
-            margin-top: 70px;
+            margin-top: 28%;
             padding: 2px;
             z-index: 162;
-            top: 50%;
-            left: 35%;
+            left: 15%;
         }
 
         input[type="text"]::-webkit-input-placeholder {
-            color: White;
+            color: rgb(216, 208, 208);
             text-align: left !important;
             padding-left: 40px;
-
         }
 
         .form-control {
             border: 0;
-            border-bottom: 1px solid black;
+            position: absolute;
+            border-bottom: 2px solid darkgrey;
             border-radius: 8px !important;
             background-color: transparent;
-            margin-left: -50px;
-            width: 470px;
+            margin-left: 25%;
+            width: 50%;
             color: white !important;
-            height: 70px;
+            height: 70%;
             font-size: 28px;
-            padding-left: 70px;
-            padding-top: 19px;
+            padding-left: 8%;
+            padding-top: 2%;
             box-shadow: none !important;
             line-height: normal;
         }
-
-        #icon {
+        .iconic {
             width: 35px;
             height: 35px;
-            margin-left: -320px;
-            margin-top: 24px;
+            margin-left: 27%;
+            margin-top: 2.7%;
             position: absolute;
             z-index: 215;
+           visibility: hidden;
         }
 
         .input-group-text {
+            position: absolute;
+            z-index: inherit;
             width: 120px;
             height: 54px;
-            margin-left: 450px;
-            margin-top: -50px;
+            margin-left: 76%;
+            margin-top: 1%;
             background-image: linear-gradient(#00ff7e, #1f3d90);
             font-size: 24px;
             border: 0 !important;
@@ -385,12 +388,45 @@
             padding: 4px 10px 7px 24px !important;
             border-radius: 30px !important;
             box-shadow: none !important;
-
         }
 
-        input[type=text]:focus {
-            border-bottom: 1px solid rgba(0, 132, 255, 0.384);
+        input[type=text]:focus{
+            border-bottom: 2px solid rgba(169, 169, 169, 0.534);
             background-color: transparent;
+        }
+        .form-control:focus +  .iconic{
+            visibility: visible;
+        }
+        @media only screen and (max-width: 768px) {
+            * {
+                transition: none;
+                animation-name: none;
+            }
+            .input-group {
+            margin-top: 65%;
+            width: 100%;
+            margin-left: -15%;
+            }
+            .form-control {
+            font-size: 20px;
+            width: 60%;
+            margin-left: 15%;
+            padding-left: 40px;
+            }
+            #icon {
+            margin-left: 14%;
+            margin-top: 5%;
+            }
+            .input-group-text {
+            width: 90px;
+            height: 40px;
+            font-size: 17px;
+            margin-top: 5%;
+            }
+            input[type="text"]::-webkit-input-placeholder
+            {
+                padding-left: 10px;
+            }
         }
 /* FeedBack CSS Starts from here */
 .feedback {
@@ -1304,25 +1340,24 @@
 
         </div>
         <div class="cont1">
-            <div id="cool"></div>
-            <div id="cool1"></div>
-            <section class="rw-wrapper">
-                <h2 class="rw-sentence">
-                    <div class="rw-words rw-words-1">
-                        <span>Network of over 5000 Restaurants</span>
-                    </div>
-                    <div class="rw-words rw-words-2">
-                        <span>To Order Online</span>
-                    </div>
-                </h2>
-            </section>
+                <div id="cool"></div>
+                <div id="cool1"></div>
+                <section class="rw-wrapper">
+                        <div class="rw-words-1">
+                            <span>Network of over 5000 Restaurants</span>
+                        </div>
+                        <div class="rw-words-2">
+                            <span>To Order Online</span>
+                        </div>
+                </section>
         </div>
         <div class="input-group">
             <form action="">
-                <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/sricon.png"
-                    id="icon">
-                <input type="text" class="form-control" placeholder="Enter the type of Food">
-                <button type="submit" class="input-group-text btn"> <a href="#menubox" id="search123" onclick="searc()" style="color: white;">Search</a></button>
+                    <input type="text" class="form-control" id="myText12" placeholder="Enter the type of Food">
+                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/sricon.png"
+                    id="icon" class="iconic">
+                    <button type="submit" class="input-group-text btn"> <a href="#menubox" id="search123" onclick="searc()"
+                            style="color: white;">Search</a></button>
             </form>
         </div>
     </section>
