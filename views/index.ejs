@@ -57,7 +57,7 @@
         }
 
         .header {
-            height: 650px;
+            height: 700px;
             width: 100%;
             position: relative;
             background-size: cover;
@@ -419,11 +419,14 @@
         }
 /* FeedBack CSS Starts from here */
 .feedback {
-            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('http://getwallpapers.com/wallpaper/full/3/6/f/1289761-popular-farm-wallpaper-1920x1080-images.jpg#.XZ4vxGOkrlU.link');
-            padding: 80px 0;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/banner3.jpg');
+            padding: 150px 0;
             background-attachment: fixed;
             margin-top: 40%;
+            background-size: 100% 100%;
             display: none;
+            background-repeat: no-repeat;
+            overflow: hidden;
         }
         .h1h1 {
             font-family: cursive;
@@ -499,34 +502,13 @@
         .anima1 span {
             font-size: 35px;
             position: absolute;
-
             margin-left: 30%;
             font-family: cursive;
             padding-top: 35px;
             color: #515151;
             font-style: bold;
             font-weight: 600;
-            animation: zm 3s;
-            animation-timing-function: linear;
         }
-
-        @keyframes zm {
-            0% {
-                opacity: 0;
-                transform: scale(0);
-            }
-
-            50% {
-                opacity: 0.5;
-                transform: scale(1.5);
-            }
-
-            100% {
-                opacity: 1;
-                transform: scale(1);
-            }
-        }
-
         #st1 {
             font-size: 30px;
             position: absolute;
@@ -536,10 +518,7 @@
             font-style: italic;
             margin-top: 20px;
             margin-left: 41%;
-            animation: zm 3s;
-            animation-timing-function: linear;
         }
-
         .lin1 {
             position: absolute;
             display: block;
@@ -547,24 +526,7 @@
             margin-left: 270px;
             width: 260px;
             border-top: 2px dotted black;
-            animation: slideIn 2s forwards;
-            animation-timing-function: ease-out;
         }
-
-        @keyframes slideIn {
-            0% {
-                transform: translateX(-900px);
-            }
-
-            50% {
-                transform: translateX(50px);
-            }
-
-            100% {
-                transform: translateX(0);
-            }
-        }
-
         .lin2 {
             width: 260px;
             border-top: 2px dotted black;
@@ -575,22 +537,6 @@
             animation: slideOut 2s forwards;
             animation-timing-function: ease-out;
         }
-
-        @keyframes slideOut {
-            0% {
-                opacity: 0;
-                transform: translateX(900px);
-            }
-
-            50% {
-                transform: translateX(-50px);
-            }
-
-            100% {
-                transform: translateX(0);
-            }
-        }
-
         .imgs {
 
             width: 70%;
@@ -599,7 +545,6 @@
             margin-top: 100px;
 
         }
-
         .imgs img {
 
             position: relative;
@@ -608,96 +553,10 @@
             margin-top: 5px;
             margin-left: 40px;
         }
-
-        #one {
-            animation: first 2s;
-            animation-direction: alternate;
-            animation-timing-function: ease-out;
-            animation-fill-mode: forwards;
-        }
-
-        @keyframes first {
-            0% {
-                left: -70px;
-                opacity: 0;
-            }
-
-            100% {
-                left: 20px;
-                opacity: 1;
-            }
-        }
-
-        #one1 {
-            animation: first1 2s;
-            animation-direction: alternate;
-            animation-timing-function: ease-out;
-            animation-fill-mode: forwards;
-            animation-delay: 1s;
-            opacity: 0;
-        }
-
-        @keyframes first1 {
-            0% {
-                left: -70px;
-                opacity: 0;
-            }
-
-            100% {
-                left: 20px;
-                opacity: 1;
-            }
-        }
-
-        #one2 {
-            animation: first2 2s;
-            animation-direction: alternate;
-            animation-timing-function: ease-out;
-            animation-fill-mode: forwards;
-            animation-delay: 2s;
-            opacity: 0;
-
-        }
-
-        @keyframes first2 {
-            0% {
-                left: -70px;
-                opacity: 0;
-            }
-
-            100% {
-                left: 20px;
-                opacity: 1;
-            }
-        }
-
-        #one3 {
-            animation: first3 2s;
-            animation-direction: alternate;
-            animation-timing-function: ease-out;
-            animation-fill-mode: forwards;
-            animation-delay: 3s;
-            opacity: 0;
-
-        }
-
-        @keyframes first3 {
-            0% {
-                left: -70px;
-                opacity: 0;
-            }
-
-            100% {
-                left: 20px;
-                opacity: 1;
-            }
-        }
-
         * {
             padding: 0px;
             margin: 0px;
         }
-
         #rege {
             position: relative;
             display: block;
@@ -1215,7 +1074,7 @@
 </head>
 
 <body>
-    <header class="top-navbar">
+    <header class="top-navbar" id="navbar11">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container">
                 <a class="navbar-brand">
@@ -1351,22 +1210,22 @@
             </form>
         </div>
     </section>
-    <div class="anima1">
-        <span>Ordering food was never so easy</span>
-        <br><br><br>
-        <div class="lin1"></div>
-        <pre id="st1">Just 4 steps follow</pre>
-        <div class="lin2"></div>
-        <div class="imgs">
-            <img id="one"
-                src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/one.png">
-            <img id="one1"
-                src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/two.png">
-            <img id="one2"
-                src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/thrww.png">
-            <img id="one3"
-                src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/four.png">
 
+    <div class="anima1 animatedParent animateOnce">
+        <span class="slower animated fadeInUp box">Ordering food was never so easy</span>
+        <br><br><br>
+        <div class="lin1 slow animated fadeInDown box"></div>
+        <pre id="st1" class="slower animated fadeInUp box delay-500">Just 4 steps follow</pre>
+        <div class="lin2 slow animated fadeInDown box"></div>
+        <div class="imgs">
+            <img class="animated fadeInLeft box delay-500" id="one"
+                src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/one.png">
+            <img class="animated fadeInLeft box delay-1000" id="one1"
+                src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/two.png">
+            <img class="animated fadeInLeft box delay-1500" id="one2"
+                src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/thrww.png">
+            <img class="animated fadeInLeft box delay-2000" id="one3"
+                src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/four.png">
         </div>
     </div>
 
@@ -1703,10 +1562,10 @@
     </section>
 
 
-    <section id="aboutus" class="aboutus">
+    <section id="aboutus" class="aboutus animatedParent animateOnce">
 
 
-        <div class="info">
+        <div class="info slow animated fadeInUp box">
             <img style="width: 190px; "
                 src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Capture.PNG">
             <br>
@@ -1731,22 +1590,21 @@
 
         </div>
 
-        <div class="uselik">
+        <div class="uselik slow animated fadeInDown box delay-500">
             <p style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 20px;">Useful Links</p>
 
             <ul style="list-style: none;">
-                <li><a style="text-decoration: none;" href="">FAQ</a></li>
-                <li><a style="text-decoration: none;" href="">About</a></li>
-                <li><a style="text-decoration: none;" href="">Terms and Condition</a></li>
-                <li><a style="text-decoration: none;" href="">Privacy Policy</a></li>
-                <li><a style="text-decoration: none;" href="">Terms of Use</a></li>
-                <li><a style="text-decoration: none;" href="">Refund Policy</a></li>
+                <li><a style="text-decoration: none;" href="/info.html/#section-1">FAQ</a></li>
+                <li><a style="text-decoration: none;" href="/info.html/#section-2">Terms and Condition</a></li>
+                <li><a style="text-decoration: none;" href="/info.html/#section-3">Privacy Policy</a></li>
+                <li><a style="text-decoration: none;" href="/info.html/#section-4">Terms of Use</a></li>
+                <li><a style="text-decoration: none;" href="/info.html/#section-5">Refund Policy</a></li>
             </ul>
             <p style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 20px;" id="fdbk">Give
                 Your Valuable Feedback</p>
             <button onclick="show_feedback()" id="fdbkbtn">Click Me</button>
         </div>
-        <div class="gtch">
+        <div class="gtch slow animated fadeIn box delay-1000">
 
             <p style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 20px;">Get in touch</p>
             <p style="color: grey; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 15px;"><i
@@ -1765,7 +1623,7 @@
             <div class="container">
                 <h1 class="h1h1">Share your problems with us</h1>
                 <br>
-                <form method="POST" id="feedform" action="/">
+                <form method="POST" id="feedform" action="/index">
                     <div class="row">
                         <div class="col-md-4 col-12 offset-2">
                             <div class="styled-input">
@@ -1803,7 +1661,6 @@
                 </form>
             </div>
         </section>    
-   
     <script>
         function show_cart(x,y,z){
             alert("You need to Signup or Login to Order this item")
@@ -1831,7 +1688,7 @@
             document.getElementById("html2").style.scrollBehavior = "unset";
             document.getElementById("feedback1").style.display = "block";
             location.href='#feedform';
-            document.getElementById("navbar").style.display = "none";
+            document.getElementById("navbar11").style.display = "none";
             disableScroll();
         }
         function show_pizza() {
