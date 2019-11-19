@@ -23,6 +23,7 @@
       margin: auto;
       margin-bottom: 10%;
       box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+      
     }
 
     .col-25 {
@@ -54,7 +55,7 @@
 
 <body>
 
-  <h1 style="text-align: center; font-size: 60px;"> <span id="username">My</span> Profile</h2>
+  <h1 style="text-align: center; font-size: 60px;"> <span id="username"><%= user.username %>'s</span> Profile</h2>
     <div class="container">
       <form action=""></form>
       <div class="row">
@@ -70,12 +71,7 @@
           <label for="lname">Email</label>
         </div>
         <div class="col-75">
-          <% if(user.email == null ) { %>
-          <span>NA</span>
-          <% } else { %>
           <span><%= user.email %></span>
-          <% } %>
-          <!-- <span id="email"><%= user.email %></span> -->
         </div>
       </div>
       <div class="row">
@@ -83,7 +79,7 @@
           <label>Country</label>
         </div>
         <div class="col-75">
-          <% if(user.country == null ) { %>
+          <% if((user.country == null) || (user.country == '' ) ) { %>
           <span>NA</span>
           <% } else { %>
           <span><%= user.country %></span>
@@ -95,7 +91,7 @@
           <label for="Gender">Gender</label>
         </div>
         <div class="col-75">
-          <% if(user.gender == null ) { %>
+          <% if((user.gender == null) || (user.gender == '') ) { %>
           <span>NA</span>
           <% } else { %>
           <span><%= user.gender %></span>
@@ -107,7 +103,7 @@
           <label>Address</label>
         </div>
         <div class="col-75">
-          <% if(user.address == null ) { %>
+          <% if((user.address == null) || (user.address == '' ) ) { %>
           <span>NA</span>
           <% } else { %>
           <span><%= user.address %></span>
@@ -119,7 +115,7 @@
           <label>Mobile Number</label>
         </div>
         <div class="col-75">
-          <% if(user.mobile == null ) { %>
+          <% if((user.mobile == null) ) { %>
           <span>NA</span>
           <% } else { %>
           <span><%= user.mobile %></span>
@@ -143,10 +139,10 @@
           <label for="subject">Bio</label>
         </div>
         <div class="col-75">
-          <% if(user.Bio == null ) { %>
+          <% if((user.bio == null) || (user.bio == '' )) { %>
           <span>NA</span>
           <% } else { %>
-          <span><%= user.Bio %></span>
+          <span><%= user.bio %></span>
           <% } %>
         </div>
       </div>

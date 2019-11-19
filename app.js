@@ -146,8 +146,66 @@ app.get("/in/profileedit",function(req, res){
 })
 
 app.post("/in/profileedit",function(req, res){
-        User.updateOne({},{$set: {gender: req.body.gender}},{upsert:true})
+    var id=req.user._id
+    if((req.body.gender != req.user.gender) && (req.body.gender != null)){
+    var gender=req.body.gender
+    User.updateOne({'_id':id},{$set:{'gender': gender}},function(err, res){
+        if(err){ throw err}
         console.log("gender updated")
+    })
+}
+else if(req.body.gender == null){
+    console.log("gender not changed")
+}
+if((req.body.dob != req.user.dob) && (req.body.dob != null)){
+    var dob=req.body.dob
+    User.updateOne({'_id':id},{$set:{'dob': dob}},function(err, res){
+        if(err){ throw err}
+        console.log("dob updated")
+    })      
+}
+else if(req.body.dob == null){
+    console.log("gender not changed")
+}
+if((req.body.address != req.user.address) && ((req.body.address != null) || (req.body.address != ''))){
+    var address=req.body.address
+    User.updateOne({'_id':id},{$set:{'address': address}},function(err, res){
+        if(err){ throw err}
+        console.log("address updated")
+    })
+}
+else if(req.body.address == null){
+    console.log("address not changed")
+}
+if((req.body.mobile != req.user.mobile) && (req.body.mobile != null)){
+    var mobile=req.body.mobile
+    User.updateOne({'_id':id},{$set:{'mobile': mobile}},function(err, res){
+        if(err){ throw err}
+        console.log("mobile updated")
+    })
+}
+else if(req.body.mobile == null){
+    console.log("mobile not changed")
+}
+if((req.body.country != req.user.country) && (req.body.country != null)){
+    var country=req.body.country
+    User.updateOne({'_id':id},{$set:{'country': country}},function(err, res){
+        if(err){ throw err}
+    })
+}
+else if(req.body.country == null){
+    console.log("country not changed")
+}
+if((req.body.bio != req.user.bio) && ((req.body.bio != '') || (req.body.bio != null))){
+    var bio=req.body.bio
+    User.updateOne({'_id':id},{$set:{'bio': bio}},function(err, res){
+        if(err){ throw err}
+        console.log("bio updated")
+    })
+}
+else if(req.body.bio == null || req.body.bio == ''){
+    console.log("bio not changed")
+}
         console.log(req.user)
         console.log(req.body.gender)
         console.log(req.user.gender)
