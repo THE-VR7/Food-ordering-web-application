@@ -109,12 +109,7 @@ app.post("/register", function (req, res) {
 
 
 app.get("/in",isLoggedIn, function (req, res) {
-    console.log(req.user)
-    console.log(req.user.email)
-    console.log(req.user.bio)
-    console.log(req.user.dob)
     res.render("in",{name: req.user.username});
-    
     console.log(req.user.username);
 });
 app.get("/",isLoggedIn, function (req, res) {
@@ -131,7 +126,6 @@ app.post("/login", passport.authenticate("local", {
 });
 
 app.get("/logout", function (req, res) {
-    console.log("1" + +req.user)
     req.logout();
     res.redirect("/");
 });
@@ -206,12 +200,30 @@ if((req.body.bio != req.user.bio) && ((req.body.bio != '') || (req.body.bio != n
 else if(req.body.bio == null || req.body.bio == ''){
     console.log("bio not changed")
 }
-        console.log(req.user)
-        console.log(req.body.gender)
-        console.log(req.user.gender)
     res.redirect("/in/profile")
 })
 
+app.get("/in1",function(req, res){
+    res.render("in",{name: req.user.username});
+    console.log(req.user.username);
+})
+
+app.post("/in1", function(req, res){
+    var id=req.user._id
+    var price=req.body.price
+    console.log(price)
+    User.updateOne({'_id':id},{$set:{'price': price}},function(err, res){
+        if(err) throw err
+        console.log("payment updated")
+    })
+    console.log(req.user)
+    res.redirect("/payment")
+})
+
+app.get("/payment",function(req, res){
+    console.log(req.user)
+    res.render("payment",{user:req.user})
+})
 
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {

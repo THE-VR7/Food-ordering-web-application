@@ -11,7 +11,8 @@ var UserSchema = new mongoose.Schema({
     mobile:Number,
     dob:Date,
     bio:String,
-    password:String
+    password:String,
+    price:Number
 });
 
 UserSchema.plugin(passportLocalMongoose);

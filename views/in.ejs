@@ -1592,17 +1592,16 @@
 
             <hr style="border: 1px solid black;">
             <div class="row">
-                <form action="/in" method="post">
+                <form action="/in1" method="post">
                     <div class="col-md-4">
                         <p id="lb4" style="font-weight: bold;">Total Price :-</p>
                     </div>
                     <div class="col-md-4">
-                        <p id="price1" style="font-weight: bold;">0</p>
+                        <p id="price1" name="price" style="font-weight: bold;">0</p>
+                        <input type="number" name="price" id="price233" style="display: none;" value="">
                     </div>
                     <div class="col-md-3">
-
-                        <a href="/payment"><button id="finalpay" class="submit-btn2" onclick="payment()"
-                                value="1">Proceed To Payment</button></a>
+                        <button type="submit" id="finalpay" class="submit-btn2" onclick="payment()">Proceed To Payment</button>
                     </div>
                 </form>
             </div>
@@ -1616,7 +1615,7 @@
                 alert("Please book at least one item to pay")
             }
             else {
-                location.href = "";
+                document.getElementById("price233").value = totprice
                 document.getElementById("finalpay").value = totprice
             }
         }
