@@ -1,238 +1,157 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-input[type=text], select, textarea {
-  width: 90%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
+  <meta charset="UTF-8">
+  <meta name="google" content="notranslate">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-label {
-  padding: 12px 12px 12px 0;
-  display: inline-block;
-}
+    label {
+      padding: 12px 12px 12px 0;
+      display: inline-block;
+    }
 
-input[type=submit] {
-  background-color: #4CAF50;
-  color: white;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  float: right;
-}
+    .container {
+      border-radius: 10px;
+      background-color: #f2f2f2;
+      padding: 20px;
+      width: 80%;
+      margin: auto;
+      margin-bottom: 10%;
+      box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+      
+    }
 
-input[type=submit]:hover {
-  background-color: #45a049;
-}
+    .col-25 {
+      float: left;
+      width: 25%;
+      margin-top: 6px;
+      font-size: 25px;
+    }
 
-.container {
-  border-radius: 10px;
-  background-color: #f2f2f2;
-  padding: 20px;
-  width: 80%;
-  margin: auto;
-  margin-bottom: 10%;
-  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
-}
+    .col-75 {
+      float: left;
+      width: 75%;
+      margin-top: 6px;
+      line-height: 250%;
+      font-size: 25px;
+      font-family: cursive;
+    }
 
-.col-25 {
-  float: left;
-  width: 25%;
-  margin-top: 6px;
-  font-size: 25px;
-}
-
-.col-75 {
-  float: left;
-  width: 75%;
-  margin-top: 6px;
-}
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .col-25, .col-75, input[type=submit] {
-    width: 100%;
-    margin-top: 0;
-  }
-}
-
-#fullname {
-    line-height: 250%;
-    font-size: 25px;
-    font-family: cursive;
-}
-#email {
-    line-height: 250%;
-    font-size: 25px;
-    font-family: cursive;
-}
-.addcon {
-    display: block;
-    line-height: 250%;
-    font-size: 25px;
-    font-family: arial;
-    font-weight: bold;
-    transform: scale(1);
-}
-.addcon:hover {
-    cursor: pointer;
-    transition-duration: 0.5s;
-    transform: scaleY(1.1);
-    color: blue;
-}
-/* Convert to display:flex when using Java script as to bring submit button on same line */
-.inputfield {
-    width: 100%;
-    display: none;
-}
-</style>
+    .profileedit {
+      background-color: #4CAF50;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  </style>
 </head>
+
 <body>
 
-<h1 style="text-align: center; font-size: 60px;"> <span id="username">My</span> Profile</h2>
-<div class="container">
-  <form action="/action_page.php">
-    <div class="row">
-      <div class="col-25">
-        <label>Full Name</label>
+  <h1 style="text-align: center; font-size: 60px;"> <span id="username"><%= user.username %>'s</span> Profile</h2>
+    <div class="container">
+      <form action=""></form>
+      <div class="row">
+        <div class="col-25">
+          <label>Full Name</label>
+        </div>
+        <div class="col-75">
+          <span id="fullname"><%= user.name %></span>
+        </div>
       </div>
-      <div class="col-75">
-        <span id="fullname">The Beast</span>
+      <div class="row">
+        <div class="col-25">
+          <label for="lname">Email</label>
+        </div>
+        <div class="col-75">
+          <span><%= user.email %></span>
+        </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label for="lname">Email</label>
+      <div class="row">
+        <div class="col-25">
+          <label>Country</label>
+        </div>
+        <div class="col-75">
+          <% if((user.country == null) || (user.country == '' ) ) { %>
+          <span>NA</span>
+          <% } else { %>
+          <span><%= user.country %></span>
+          <% } %>
+        </div>
       </div>
-      <div class="col-75">
-        <span id="email">thebeast@57.com</span>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-25">
-        <label>Country</label>
-      </div>
-      <div class="col-75">
-            <span id="countrytext" class="addcon" onclick="show_country()">Choose your country</span>
-        <select id="country" name="country" style="display: none;">
-          <option value="australia">India</option>
-          <option value="canada">Canada</option>
-          <option value="usa">USA</option>
-        </select>
-      </div>
-    </div>
-    <div class="row">
+      <div class="row">
         <div class="col-25">
           <label for="Gender">Gender</label>
         </div>
         <div class="col-75">
-            <span id="gender" class="addcon" onclick="show_gender()">Add Gender</span>
-            <div class="gender123" id="gender22" style="display: none; width: 100%;">
-            <label class="radio-inline">
-                <input type="radio" name="gender">Male
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="gender">Female
-              </label>
-              <label class="radio-inline">
-                <input type="radio" name="gender">Other
-              </label>
-            </div>
+          <% if((user.gender == null) || (user.gender == '') ) { %>
+          <span>NA</span>
+          <% } else { %>
+          <span><%= user.gender %></span>
+          <% } %>
         </div>
       </div>
-    <div class="row">
-            <div class="col-25">
-              <label >Address</label>
-            </div>
-            <div class="col-75">
-                <span id="address"  class="addcon" onclick="show_address()">Add Address</span>
-                <div class="inputfield" id="address22">
-                <input type="text" id="addressblock" placeholder="Your Address Here" name="address">
-                <input type="submit" value="Submit" style="margin-left: 5%;">
-            </div>
-            </div>
-    </div>
-    <div class="row">
+      <div class="row">
         <div class="col-25">
-                  <label >Mobile Number</label>
-                </div>
-                <div class="col-75">
-                    <span id="mno"  class="addcon" onclick="show_mob()">Add Mobile Number</span>
-                    <div class="inputfield" id="mno22">
-                    <input type="text" id="mno" placeholder="Your Mobile No. Here">
-                    <input type="submit" value="Submit" style="margin-left: 5%;">
-                    </div>
-                </div>
-    </div>
-    <div class="row">
-                    <div class="col-25">
-                      <label >Date of Birth</label>
-                    </div>
-                    <div class="col-75">
-                        <span id="dob"  class="addcon" onclick="show_dob()">Add Date of Birth</span>
-                        <div class="inputfield" id="dob22">
-                            <input type="text" id="addressblock" placeholder="Your Date of Birth Here(dd/mm/yyyy)">
-                            <input type="submit" value="Submit" style="margin-left: 5%;">
-                    </div>
-                    </div>
-    </div>         
-    <div class="row">
-      <div class="col-25">
-        <label for="subject">Bio</label>
+          <label>Address</label>
+        </div>
+        <div class="col-75">
+          <% if((user.address == null) || (user.address == '' ) ) { %>
+          <span>NA</span>
+          <% } else { %>
+          <span><%= user.address %></span>
+          <% } %>
+        </div>
       </div>
-      <div class="col-75">
-        <textarea id="bio" name="subject" style="width: 100%; height: 100px; font-size: 20px;" placeholder="Write something about yourself.." style="height:150px"></textarea>
-        <span class="addcon" style="display: none;">My bio</span>
+      <div class="row">
+        <div class="col-25">
+          <label>Mobile Number</label>
+        </div>
+        <div class="col-75">
+          <% if((user.mobile == null) ) { %>
+          <span>NA</span>
+          <% } else { %>
+          <span><%= user.mobile %></span>
+          <% } %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label>Date of Birth</label>
+        </div>
+        <div class="col-75">
+          <% if(user.dob == null ) { %>
+          <span>NA</span>
+          <% } else { %>
+          <span><%= user.dob %></span>
+          <% } %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-25">
+          <label for="subject">Bio</label>
+        </div>
+        <div class="col-75">
+          <% if((user.bio == null) || (user.bio == '' )) { %>
+          <span>NA</span>
+          <% } else { %>
+          <span><%= user.bio %></span>
+          <% } %>
+        </div>
+      </div>
+      <div class="row">
+        <a class="profileedit" href="/in/profileedit">Edit</a>
+      </div>
+      </form>
     </div>
-    </div>
-    <div class="row">
-        <input type="submit" value="Submit">
-    </div>
-  </form>
-</div>
 
-<Script>
-function show_country()
-{
-    document.getElementById("countrytext").style.display = "none";
-    document.getElementById("country").style.display = "block";
-}
-function show_gender()
-{
-    document.getElementById("gender").style.display = "none";
-    document.getElementById("gender22").style.display = "block";
-}
-function show_address()
-{
-    document.getElementById("address").style.display = "none";
-    document.getElementById("address22").style.display = "flex";
-}
-function show_mob()
-{
-    document.getElementById("mno").style.display = "none";
-    document.getElementById("mno22").style.display = "flex";
-}
-function show_dob()
-{
-    document.getElementById("dob").style.display = "none";
-    document.getElementById("dob22").style.display = "flex";
-}
-
-</Script>
 </body>
+
 </html>
