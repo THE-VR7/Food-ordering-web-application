@@ -225,6 +225,10 @@ app.get("/payment",function(req, res){
     res.render("payment",{user:req.user})
 })
 
+app.get("/info/",function(req, res){
+    res.render("info")
+})
+
 function isLoggedIn(req, res, next) {
     if (req.isAuthenticated()) {
         return next();
