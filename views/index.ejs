@@ -145,7 +145,21 @@
         .navbar2 {
             margin-left: 35%;
         }
-
+        @media only screen and (max-width: 768px) {
+            .navbar2 {
+                margin-left: 3%;
+                width: 50%;
+            }
+            .navbar1 {
+                margin-left: 8%;
+                width: 16%;
+                height: 40px;
+            }
+            .navbar-toggler {
+                margin-left: 80%;
+                margin-top: -15%;
+            }
+        }
         .cont1 {
             width: 100%;
             height: 50%;
@@ -513,7 +527,6 @@
             font-size: 30px;
             position: absolute;
             font-family: sans-serif;
-
             color: #E24425;
             font-style: italic;
             margin-top: 20px;
@@ -553,6 +566,36 @@
             margin-top: 5px;
             margin-left: 40px;
         }
+        @media only screen and (max-width:768px) {
+            * {
+                animation-name: none;
+                transition: none;
+            }
+            .anima1 span {
+                font-size: 22px;
+                margin-left: 10%;
+            }
+            .imgs {
+                width: 100%;
+                margin-left: 15%;
+                margin-top: 20%;
+            }
+            .imgs img {
+                width: 150px;
+                height: 130px;
+                margin-left: 0;
+            }
+            .lin1,.lin2 {
+                display: none;
+            }
+            #st1 {
+                font-size: 20px;
+                margin-left: 33%;
+            }
+        } 
+
+
+        /* Aniam1 ($ images ) CSS ends here */
         * {
             padding: 0px;
             margin: 0px;
@@ -1594,11 +1637,11 @@
             <p style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 20px;">Useful Links</p>
 
             <ul style="list-style: none;">
-                <li><a style="text-decoration: none;" target="_blank" href="/info/#section-1">FAQ</a></li>
-                <li><a style="text-decoration: none;" target="_blank" href="/info/#section-2">Terms and Condition</a></li>
-                <li><a style="text-decoration: none;" target="_blank" href="/info/#section-3">Privacy Policy</a></li>
-                <li><a style="text-decoration: none;" target="_blank" href="/info/#section-4">Terms of Use</a></li>
-                <li><a style="text-decoration: none;" target="_blank" href="/info/#section-5">Refund Policy</a></li>
+                <li><a style="text-decoration: none;" href="/info.html/#section-1">FAQ</a></li>
+                <li><a style="text-decoration: none;" href="/info.html/#section-2">Terms and Condition</a></li>
+                <li><a style="text-decoration: none;" href="/info.html/#section-3">Privacy Policy</a></li>
+                <li><a style="text-decoration: none;" href="/info.html/#section-4">Terms of Use</a></li>
+                <li><a style="text-decoration: none;" href="/info.html/#section-5">Refund Policy</a></li>
             </ul>
             <p style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 20px;" id="fdbk">Give
                 Your Valuable Feedback</p>
