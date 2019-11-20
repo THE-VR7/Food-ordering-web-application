@@ -212,12 +212,17 @@ app.post("/in1", function(req, res){
     var id=req.user._id
     var price=req.body.price
     console.log(price)
+    if(price == 0){
+        res.redirect("/in")
+    }
+    else{
     User.updateOne({'_id':id},{$set:{'price': price}},function(err, res){
         if(err) throw err
         console.log("payment updated")
     })
     console.log(req.user)
     res.redirect("/payment")
+}
 })
 
 app.get("/payment",function(req, res){
