@@ -48,6 +48,7 @@
         * {
             box-sizing: border-box;
         }
+
         html {
             scroll-behavior: smooth;
         }
@@ -168,6 +169,7 @@
             z-index: 100;
             background-color: transparent;
         }
+
         .rw-wrapper {
             width: 100%;
             height: 75%;
@@ -175,6 +177,7 @@
             z-index: 120;
             margin-top: 8%;
         }
+
         .rw-words-1 {
             font-size: 63px;
             margin-left: 4%;
@@ -184,6 +187,7 @@
             color: white;
             font-style: italic;
         }
+
         .rw-words-2 {
             width: 60%;
             height: 30%;
@@ -193,6 +197,7 @@
             color: white;
             animation: rotateWordsSecond 2s linear 0s;
         }
+
         @keyframes rotateWordsFirst {
             0% {
                 font-size: 5px;
@@ -216,21 +221,33 @@
                 font-size: 50px;
                 opacity: 0.4;
             }
+
             50% {
                 font-size: 63px;
                 opacity: .5;
             }
-            
+
             100% {
                 opacity: 1;
             }
         }
 
         @keyframes rotateWordsSecond {
-            
-            0% { opacity: 0; transform: translateX(-100%) rotate(-240deg); }
-            50% {opacity: 0.5; transform: translateX(-50%) rotate(-120deg);}
-             100% { opacity: 1; transform: translateX(0px) rotate(0deg); }
+
+            0% {
+                opacity: 0;
+                transform: translateX(-100%) rotate(-240deg);
+            }
+
+            50% {
+                opacity: 0.5;
+                transform: translateX(-50%) rotate(-120deg);
+            }
+
+            100% {
+                opacity: 1;
+                transform: translateX(0px) rotate(0deg);
+            }
         }
 
         #cool {
@@ -248,6 +265,7 @@
             transform: rotateZ(90deg);
             opacity: 0;
         }
+
         #cool1 {
             width: 2%;
             height: 78.5%;
@@ -313,26 +331,31 @@
             }
 
         }
+
         @media only screen and (max-width: 768px) {
-            .rw-words-1{
+            .rw-words-1 {
                 font-size: 25px;
                 margin-top: 25%;
             }
-            .rw-words-2{
+
+            .rw-words-2 {
                 font-size: 20px;
                 margin-top: -10%;
             }
+
             #cool {
                 margin-top: 33%;
                 height: 20%;
                 width: 1%;
             }
+
             #cool1 {
                 margin-top: 35.5%;
                 height: 20%;
                 width: 1%;
             }
         }
+
         .input-group {
             width: 67%;
             height: 100px;
@@ -367,6 +390,7 @@
             box-shadow: none !important;
             line-height: normal;
         }
+
         .iconic {
             width: 35px;
             height: 35px;
@@ -374,7 +398,7 @@
             margin-top: 2.7%;
             position: absolute;
             z-index: 215;
-           visibility: hidden;
+            visibility: hidden;
         }
 
         .input-group-text {
@@ -393,46 +417,53 @@
             box-shadow: none !important;
         }
 
-        input[type=text]:focus{
+        input[type=text]:focus {
             border-bottom: 2px solid rgba(169, 169, 169, 0.534);
             background-color: transparent;
         }
-        .form-control:focus +  .iconic{
+
+        .form-control:focus+.iconic {
             visibility: visible;
         }
+
         @media only screen and (max-width: 768px) {
             * {
                 transition: none;
                 animation-name: none;
             }
+
             .input-group {
-            margin-top: 65%;
-            width: 100%;
-            margin-left: -15%;
+                margin-top: 65%;
+                width: 100%;
+                margin-left: -15%;
             }
+
             .form-control {
-            font-size: 20px;
-            width: 60%;
-            margin-left: 15%;
-            padding-left: 40px;
+                font-size: 20px;
+                width: 60%;
+                margin-left: 15%;
+                padding-left: 40px;
             }
+
             #icon {
-            margin-left: 14%;
-            margin-top: 5%;
+                margin-left: 14%;
+                margin-top: 5%;
             }
+
             .input-group-text {
-            width: 90px;
-            height: 40px;
-            font-size: 17px;
-            margin-top: 5%;
+                width: 90px;
+                height: 40px;
+                font-size: 17px;
+                margin-top: 5%;
             }
-            input[type="text"]::-webkit-input-placeholder
-            {
+
+            input[type="text"]::-webkit-input-placeholder {
                 padding-left: 10px;
             }
         }
-/* FeedBack CSS Starts from here */
-.feedback {
+
+        /* FeedBack CSS Starts from here */
+        .feedback {
             background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/banner3.jpg');
             padding: 150px 0;
             background-attachment: fixed;
@@ -442,6 +473,7 @@
             background-repeat: no-repeat;
             overflow: hidden;
         }
+
         .h1h1 {
             font-family: cursive;
             font-weight: 300;
@@ -449,21 +481,23 @@
             color: white;
             text-align: center;
         }
+
         input:focus~label,
         textarea:focus~label,
-        input:valid~label
-        {
+        input:valid~label {
             font-size: 0.75em;
             color: gray;
             top: -5px;
             -webkit-transition: all 0.225s ease;
             transition: all 0.225s ease;
         }
+
         .styled-input {
             width: 80%;
             margin: 1rem 0;
             border-radius: 4px;
         }
+
         .styled-input label {
             color: #999;
             padding: 1.3rem 30px 1rem 30px;
@@ -474,6 +508,7 @@
             transition: all 0.25s ease;
             pointer-events: none;
         }
+
         .feedback input,
         .feedback textarea {
             padding: 30px;
@@ -484,11 +519,14 @@
             color: black;
             border-radius: 4px;
         }
-        .feedback input:focus,.feedback textarea:focus {
+
+        .feedback input:focus,
+        .feedback textarea:focus {
             background-color: white;
             outline: 0;
             border: 0;
         }
+
         .submit-btn {
             width: 130px;
             padding: 8px 0;
@@ -501,10 +539,12 @@
             margin-top: 20px;
             text-align: center;
         }
+
         .submit-btn:hover {
             transform: scale(1.1);
             transition-duration: 0.5s;
         }
+
         .anima1 {
             width: 100%;
             position: relative;
@@ -523,6 +563,7 @@
             font-style: bold;
             font-weight: 600;
         }
+
         #st1 {
             font-size: 30px;
             position: absolute;
@@ -532,6 +573,7 @@
             margin-top: 20px;
             margin-left: 41%;
         }
+
         .lin1 {
             position: absolute;
             display: block;
@@ -540,6 +582,7 @@
             width: 260px;
             border-top: 2px dotted black;
         }
+
         .lin2 {
             width: 260px;
             border-top: 2px dotted black;
@@ -550,6 +593,7 @@
             animation: slideOut 2s forwards;
             animation-timing-function: ease-out;
         }
+
         .imgs {
 
             width: 70%;
@@ -558,6 +602,7 @@
             margin-top: 100px;
 
         }
+
         .imgs img {
 
             position: relative;
@@ -600,6 +645,7 @@
             padding: 0px;
             margin: 0px;
         }
+
         #rege {
             position: relative;
             display: block;
@@ -809,9 +855,11 @@
             transform: scale(1.1);
             transition: 1s;
         }
+
         .feature-img:hover {
             cursor: pointer;
         }
+
         .gallery {
             padding: 100px 0;
             background-color: lightgray;
@@ -969,7 +1017,7 @@
             width: 100%;
             height: 112px;
         }
-        
+
         .figure {
             position: relative;
             overflow: hidden;
@@ -987,9 +1035,11 @@
             color: #515151;
             border-radius: 2px;
         }
-        .figure-caption:last-child{
+
+        .figure-caption:last-child {
             margin-top: 0px;
         }
+
         .cart-btn {
             position: absolute;
             width: 70px;
@@ -1004,13 +1054,15 @@
             border-radius: 30px !important;
             box-shadow: none !important;
             transition: all 0.8s ease-in-out;
-        transform: translate(300%, 300%); 
+            transform: translate(300%, 300%);
 
         }
+
         .figure:hover .cart-btn {
 
-        transform: translate(0, 0); 
+            transform: translate(0, 0);
         }
+
         .block11 {
             margin-top: 10%;
             height: 200px;
@@ -1163,11 +1215,11 @@
                 <br><br>
                 <h5 style="color: blue;">Don't have an account &nbsp;&nbsp;&nbsp;&nbsp;<a style="position: absolute;"
                         onclick="document.getElementById('id02').style.display='block' , document.getElementById('id01').style.display='none'">
-                        &nbsp;Sign up</a></h3>
-                    <div class="container1" style="background-color: transparent">
-                        <button type="button" onclick="document.getElementById('id01').style.display='none'"
-                            class="cancelbtn">Cancel</button>
-                    </div>
+                        &nbsp;Sign up</a></h5>
+                <div class="container1" style="background-color: transparent">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                        class="cancelbtn">Cancel</button>
+                </div>
             </form>
         </div>
     </div>
@@ -1197,6 +1249,14 @@
                 <br>
                 <button type="submit"
                     style="letter-spacing: 2px; font-size: 19px; margin-top: 15px; margin-left: 95px;">Register</button>
+                <br><br>
+                <h5 style="color: red;">Already have an account &nbsp;&nbsp;&nbsp;&nbsp;<a style="position: absolute;"
+                        onclick="document.getElementById('id02').style.display='none' , document.getElementById('id01').style.display='block'">
+                        &nbsp;Log in</a></h5>
+                <div class="container1" style="background-color: transparent">
+                    <button type="button" onclick="document.getElementById('id01').style.display='none'"
+                        class="cancelbtn">Cancel</button>
+                </div>
             </form>
         </div>
     </div>
@@ -1232,24 +1292,24 @@
 
         </div>
         <div class="cont1">
-                <div id="cool"></div>
-                <div id="cool1"></div>
-                <section class="rw-wrapper">
-                        <div class="rw-words-1">
-                            <span>Network of over 5000 Restaurants</span>
-                        </div>
-                        <div class="rw-words-2">
-                            <span>To Order Online</span>
-                        </div>
-                </section>
+            <div id="cool"></div>
+            <div id="cool1"></div>
+            <section class="rw-wrapper">
+                <div class="rw-words-1">
+                    <span>Network of over 5000 Restaurants</span>
+                </div>
+                <div class="rw-words-2">
+                    <span>To Order Online</span>
+                </div>
+            </section>
         </div>
         <div class="input-group">
             <form action="">
-                    <input type="text" class="form-control" id="myText12" placeholder="Enter the type of Food">
-                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/sricon.png"
+                <input type="text" class="form-control" id="myText12" placeholder="Enter the type of Food">
+                <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/sricon.png"
                     id="icon" class="iconic">
-                    <button type="submit" class="input-group-text btn"> <a href="#menubox" id="search123" onclick="searc()"
-                            style="color: white;">Search</a></button>
+                <button type="submit" class="input-group-text btn"> <a href="#menubox" id="search123" onclick="searc()"
+                        style="color: white;">Search</a></button>
             </form>
         </div>
     </section>
@@ -1364,215 +1424,255 @@
     </section>
     <section class="features1" id="menubox">
 
-            <div class="container">
-                <div class="row">
-                    <div class="col-12 col-md-4">
-                        <div class="row">
-                            <div class="col-4 col-md-5">
-                                <h4 id="one">Our Menu</h4>
-                            </div>
-                            <div class="col-8 col-md-7 dotted">
-                                <hr id="lin">
-                            </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4">
+                    <div class="row">
+                        <div class="col-4 col-md-5">
+                            <h4 id="one">Our Menu</h4>
                         </div>
-                        <div class="row">
-                            <div class="col-12 col-md-12">
-                                <div class="list-group list-group-flush">
-                                    <a onclick="show_pizza()" id="pizzaid"
-                                        class="list-group-item list-group-item-action">Pizza</a>
-                                    <a onclick="show_burger()" id="burgerid"
-                                        class="list-group-item list-group-item-action">Burger</a>
-                                    <a onclick="show_paneer()" id="paneerid"
-                                        class="list-group-item list-group-item-action">Paneer</a>
-                                    <a onclick="show_icecream()" id="icecreamid"
-                                        class="list-group-item list-group-item-action">Ice Cream</a>
-                                </div>
+                        <div class="col-8 col-md-7 dotted">
+                            <hr id="lin">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-md-12">
+                            <div class="list-group list-group-flush">
+                                <a onclick="show_pizza()" id="pizzaid"
+                                    class="list-group-item list-group-item-action">Pizza</a>
+                                <a onclick="show_burger()" id="burgerid"
+                                    class="list-group-item list-group-item-action">Burger</a>
+                                <a onclick="show_paneer()" id="paneerid"
+                                    class="list-group-item list-group-item-action">Paneer</a>
+                                <a onclick="show_icecream()" id="icecreamid"
+                                    class="list-group-item list-group-item-action">Ice Cream</a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-12 col-md-8">
+                </div>
+                <div class="col-12 col-md-8">
+                    <div class="row">
+                        <div class="col-5 col-md-5">
+                            <h4 id="one">Top Cuisines</h4>
+                        </div>
+                        <div class="col-7 col-md-7 dotted">
+                            <hr id="lin">
+                        </div>
+                    </div>
+                    <div id="pizza">
                         <div class="row">
-                            <div class="col-5 col-md-5">
-                                <h4 id="one">Top Cuisines</h4>
+                            <div class="col-5 col-md-5" id="img11">
+                                <figure class="figure">
+                                    <button class="cart-btn" value="Order Now"
+                                        onclick="show_cart('Indi Tandoori Pizza','Dominos',450)">Order Now</button>
+                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/IndianTandooriPaneer.jpg"
+                                        class="figure-img img-fluid rounded">
+                                    <figcaption class="figure-caption"><span id="cap111">Indi Tandoori</span>
+                                    </figcaption>
+                                    <figcaption class="figure-caption"><span id="cap112">Dominos</span><br><span
+                                            id="cap113">&#8377 450</span></figcaption>
+                                </figure>
                             </div>
-                            <div class="col-7 col-md-7 dotted">
-                                <hr id="lin">
-                            </div>
-                        </div>
-                        <div id="pizza">
-                            <div class="row">                                                       
-                                <div class="col-5 col-md-5" id="img11">
-                                    <figure class="figure">
-                                        <button class="cart-btn" value="Order Now" onclick="show_cart('Indi Tandoori Pizza','Dominos',450)">Order Now</button>
-                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/IndianTandooriPaneer.jpg"
-                                            class="figure-img img-fluid rounded">
-                                        <figcaption class="figure-caption"><span id="cap111">Indi Tandoori</span></figcaption>
-                                        <figcaption class="figure-caption"><span id="cap112">Dominos</span><br><span id="cap113">&#8377 450</span></figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-5 col-md-5" id="img22">
-                                    <figure class="figure">
-                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Peppp Paneer Pizza','Dominos',395)">Order Now</button>
-                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/peppypaneer.png"
-                                            class="figure-img img-fluid rounded">
-                                        <figcaption class="figure-caption" id="cap121">Peppy Paneer</figcaption>
-                                        <figcaption class="figure-caption"><span id="cap122">Dominos</span><br><span id="cap123">&#8377 395</span></figcaption>
-                                    </figure>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-5 col-md-5" id="img33">
-                                    <figure class="figure">
-                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Veg Extravaganza Pizza','Dominos',450)">Order Now</button>
-                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/vegextra.png"
-                                            class="figure-img img-fluid rounded">
-                                        <figcaption class="figure-caption" id="cap131">Veg Extravaganza</figcaption>
-                                        <figcaption class="figure-caption"><span id="cap132">Dominos</span><br><span id="cap133">&#8377 450</span></figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-5 col-md-5" id="img44">
-                                    <figure class="figure">
-                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Mexican Green Wave Pizza','Dominos',395)">Order Now</button>
-                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/mexgreen.png"
-                                            class="figure-img img-fluid rounded">
-                                        <figcaption class="figure-caption" id="cap141">Mexican Green Wave</figcaption>
-                                        <figcaption class="figure-caption"><span id="cap142">Dominos</span><br><span id="cap143">&#8377 395</span></figcaption>
-                                    </figure>
-                                </div>
+                            <div class="col-5 col-md-5" id="img22">
+                                <figure class="figure">
+                                    <button class="cart-btn" value="Order Now"
+                                        onclick="show_cart('Peppp Paneer Pizza','Dominos',395)">Order Now</button>
+                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/peppypaneer.png"
+                                        class="figure-img img-fluid rounded">
+                                    <figcaption class="figure-caption" id="cap121">Peppy Paneer</figcaption>
+                                    <figcaption class="figure-caption"><span id="cap122">Dominos</span><br><span
+                                            id="cap123">&#8377 395</span></figcaption>
+                                </figure>
                             </div>
                         </div>
-                        <div id="burger">
-                            <div class="row">
-                                <div class="col-5 col-md-5" id="img11">
-                                    <figure class="figure">
-                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Mc Aloo Tikki Burger','MacDonalds',48)">Order Now</button>
-                                        <img src="https://i.ytimg.com/vi/q7Idojp5ZY8/maxresdefault.jpg"
-                                            class="figure-img img-fluid rounded">
-                                        <figcaption class="figure-caption" id="211">Mc Aloo Tikki</figcaption>
-                                        <figcaption class="figure-caption"><span id="cap212">MacDonalds'</span><br><span id="cap213">&#8377 48</span></figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-5 col-md-5" id="img22">
-                                    <figure class="figure">
-                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Mexican Mc Aloo Tikki','MacDonalds',55)">Order Now</button>
-                                        <img src="https://i1.wp.com/files.hungryforever.com/wp-content/uploads/2016/07/10202927/McDonalds-Featured.jpg?resize=1075%2C605&ssl=1"
-                                            class="figure-img img-fluid rounded">
-                                        <figcaption class="figure-caption" id="221">Mexican Mc Aloo Tikki</figcaption>
-                                        <figcaption class="figure-caption"><span id="cap222">MacDonalds'</span><br><span id="cap223">&#8377 55</span></figcaption>
-                                    </figure>
-                                </div>
+                        <div class="row">
+                            <div class="col-5 col-md-5" id="img33">
+                                <figure class="figure">
+                                    <button class="cart-btn" value="Order Now"
+                                        onclick="show_cart('Veg Extravaganza Pizza','Dominos',450)">Order Now</button>
+                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/vegextra.png"
+                                        class="figure-img img-fluid rounded">
+                                    <figcaption class="figure-caption" id="cap131">Veg Extravaganza</figcaption>
+                                    <figcaption class="figure-caption"><span id="cap132">Dominos</span><br><span
+                                            id="cap133">&#8377 450</span></figcaption>
+                                </figure>
                             </div>
-                            <div class="row">
-                                <div class="col-5 col-md-5" id="img33">
-                                    <figure class="figure">
-                                            <button class="cart-btn" value="Order Now" onclick="show_cart('American Cheese Burger','MacDonalds',121)">Order Now</button>
-                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvDfrD9Or8ap6NcGJ64GhW6xdzl0o0elqArC-PJ670a9-6dFFBlg&s"
-                                            class="figure-img img-fluid rounded">
-                                        <figcaption class="figure-caption" id="231">American Cheese</figcaption>
-                                        <figcaption class="figure-caption"><span id="cap232">MacDonalds'</span><br><span id="cap233">&#8377 121</span></figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-5 col-md-5" id="img44">
-                                    <figure class="figure">
-                                            <button class="cart-btn" value="Order Now" onclick="show_cart('McVeggi Burger','MacDonalds',107)">Order Now</button>
-                                        <img src="https://glamadelaide.com.au/wp-content/uploads/2019/04/McDonalds_Veggie_Burger.png"
-                                            class="figure-img img-fluid rounded">
-                                        <figcaption class="figure-caption" id="241">McVeggi</figcaption>
-                                        <figcaption class="figure-caption"><span id="cap242">MacDonalds'</span><br><span id="cap243">&#8377 107</span></figcaption>
-                                    </figure>
-                                </div>
+                            <div class="col-5 col-md-5" id="img44">
+                                <figure class="figure">
+                                    <button class="cart-btn" value="Order Now"
+                                        onclick="show_cart('Mexican Green Wave Pizza','Dominos',395)">Order Now</button>
+                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/mexgreen.png"
+                                        class="figure-img img-fluid rounded">
+                                    <figcaption class="figure-caption" id="cap141">Mexican Green Wave</figcaption>
+                                    <figcaption class="figure-caption"><span id="cap142">Dominos</span><br><span
+                                            id="cap143">&#8377 395</span></figcaption>
+                                </figure>
                             </div>
                         </div>
-                        <div id="paneer">
-                            <div class="row">
-                                <div class="col-5 col-md-5" id="img11">
-                                    <figure class="figure">
-                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Paneer Do pyaza','Agrawal Bhojanalay',175)">Order Now</button>
-                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Paneer%20Do%20Pyaza.jpg"
-                                            class="figure-img img-fluid rounded">
-                                        <figcaption class="figure-caption" id="311">Paneer Do Pyaza</figcaption>
-                                        <figcaption class="figure-caption"><span id="cap312">Agrawal Bhojanalay</span><br><span id="cap313">&#8377 175</span></figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-5 col-md-5" id="img22">
-                                    <figure class="figure">
-                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Mattar Paneer','Taj Family Restaurant',120)">Order Now</button>
-                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Mattar%20Paneer.jpg"
-                                            class="figure-img img-fluid rounded">
-                                        <figcaption class="figure-caption" id="321">Mattar Paneer</figcaption>
-                                        <figcaption class="figure-caption"><span id="cap322">Taj Family Restaurant</span><br><span id="cap323">&#8377 120</span></figcaption>
-                                    </figure>
-                                </div>
+                    </div>
+                    <div id="burger">
+                        <div class="row">
+                            <div class="col-5 col-md-5" id="img11">
+                                <figure class="figure">
+                                    <button class="cart-btn" value="Order Now"
+                                        onclick="show_cart('Mc Aloo Tikki Burger','MacDonalds',48)">Order Now</button>
+                                    <img src="https://i.ytimg.com/vi/q7Idojp5ZY8/maxresdefault.jpg"
+                                        class="figure-img img-fluid rounded">
+                                    <figcaption class="figure-caption" id="211">Mc Aloo Tikki</figcaption>
+                                    <figcaption class="figure-caption"><span id="cap212">MacDonalds'</span><br><span
+                                            id="cap213">&#8377 48</span></figcaption>
+                                </figure>
                             </div>
-                            <div class="row">
-                                <div class="col-5 col-md-5" id="img33">
-                                    <figure class="figure">
-                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Kadai Paneer','Food Hut Restaurant',155)">Order Now</button>
-                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Kadai%20Paneer.jpg"
-                                            class="figure-img img-fluid rounded">
-                                        <figcaption class="figure-caption" id="331">Kadai Paneer</figcaption>
-                                        <figcaption class="figure-caption"><span id="cap332">Food Hut Restaurant</span><br><span id="cap333">&#8377 155</span></figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-5 col-md-5" id="img44">
-                                    <figure class="figure">
-                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Shahi Paneer','Shankar Foods',165)">Order Now</button>
-                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Shahi%20Paneer.jpg"
-                                            class="figure-img img-fluid rounded">
-                                        <figcaption class="figure-caption" id="341">Shahi Paneer</figcaption>
-                                        <figcaption class="figure-caption"><span id="cap342">Shankar Foods</span><br><span id="cap343">&#8377 165</span></figcaption>
-                                    </figure>
-                                </div>
+                            <div class="col-5 col-md-5" id="img22">
+                                <figure class="figure">
+                                    <button class="cart-btn" value="Order Now"
+                                        onclick="show_cart('Mexican Mc Aloo Tikki','MacDonalds',55)">Order Now</button>
+                                    <img src="https://i1.wp.com/files.hungryforever.com/wp-content/uploads/2016/07/10202927/McDonalds-Featured.jpg?resize=1075%2C605&ssl=1"
+                                        class="figure-img img-fluid rounded">
+                                    <figcaption class="figure-caption" id="221">Mexican Mc Aloo Tikki</figcaption>
+                                    <figcaption class="figure-caption"><span id="cap222">MacDonalds'</span><br><span
+                                            id="cap223">&#8377 55</span></figcaption>
+                                </figure>
                             </div>
                         </div>
-                        <div id="icecream">
-                            <div class="row">
-                                <div class="col-5 col-md-5" id="img11">
-                                    <figure class="figure">
-                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Fresh Mango Ice Cream','Baskin Robbins',69)">Order Now</button>
-                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Fresh%20Fruit%20Mango%20Ice%20Cream.jpg"
-                                            class="figure-img img-fluid rounded">
-                                        <figcaption class="figure-caption" id="411">Fresh Mango</figcaption>
-                                        <figcaption class="figure-caption"><span id="cap412">Baskin Robbins</span><br><span id="cap413">&#8377 69</span></figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-5 col-md-5" id="img22">
-                                    <figure class="figure">
-                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Fresh Coconut Ice Cream','Baskin Robbins',89)">Order Now</button>
-                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Coconut%20Ice%20cream.jpg"
-                                            class="figure-img img-fluid rounded">
-                                        <figcaption class="figure-caption" id="421">Fresh Coconut</figcaption>
-                                        <figcaption class="figure-caption"><span id="cap422">Baskin Robbins</span><br><span id="cap423">&#8377 89</span></figcaption>
-                                    </figure>
-                                </div>
+                        <div class="row">
+                            <div class="col-5 col-md-5" id="img33">
+                                <figure class="figure">
+                                    <button class="cart-btn" value="Order Now"
+                                        onclick="show_cart('American Cheese Burger','MacDonalds',121)">Order
+                                        Now</button>
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvDfrD9Or8ap6NcGJ64GhW6xdzl0o0elqArC-PJ670a9-6dFFBlg&s"
+                                        class="figure-img img-fluid rounded">
+                                    <figcaption class="figure-caption" id="231">American Cheese</figcaption>
+                                    <figcaption class="figure-caption"><span id="cap232">MacDonalds'</span><br><span
+                                            id="cap233">&#8377 121</span></figcaption>
+                                </figure>
                             </div>
-                            <div class="row">
-                                <div class="col-5 col-md-5" id="img33">
-                                    <figure class="figure">
-                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Straw Berry Ice cream','Baskin Robbins',69)">Order Now</button>
-                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/StrawBerry%20Ice%20cream.jpg"
-                                            class="figure-img img-fluid rounded">
-                                        <figcaption class="figure-caption" id="431">Straw Berry</figcaption>
-                                        <figcaption class="figure-caption"><span id="cap432">Baskin Robbins</span><br><span id="cap433">&#8377 69</span></figcaption>
-                                    </figure>
-                                </div>
-                                <div class="col-5 col-md-5" id="img44">
-                                    <figure class="figure">
-                                            <button class="cart-btn" value="Order Now" onclick="show_cart('Kesar Pasta Ice Cream','Baskin Robbins',79)">Order Now</button>
-                                        <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Kesar%20Pasta%20Ice%20cream.jpg"
-                                            class="figure-img img-fluid rounded">
-                                        <figcaption class="figure-caption" id="441">Kesar Pasta</figcaption>
-                                        <figcaption class="figure-caption"><span id="cap442">Baskin Robbins</span><br><span id="cap443">&#8377 79</span></figcaption>
-                                    </figure>
-                                </div>
+                            <div class="col-5 col-md-5" id="img44">
+                                <figure class="figure">
+                                    <button class="cart-btn" value="Order Now"
+                                        onclick="show_cart('McVeggi Burger','MacDonalds',107)">Order Now</button>
+                                    <img src="https://glamadelaide.com.au/wp-content/uploads/2019/04/McDonalds_Veggie_Burger.png"
+                                        class="figure-img img-fluid rounded">
+                                    <figcaption class="figure-caption" id="241">McVeggi</figcaption>
+                                    <figcaption class="figure-caption"><span id="cap242">MacDonalds'</span><br><span
+                                            id="cap243">&#8377 107</span></figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="paneer">
+                        <div class="row">
+                            <div class="col-5 col-md-5" id="img11">
+                                <figure class="figure">
+                                    <button class="cart-btn" value="Order Now"
+                                        onclick="show_cart('Paneer Do pyaza','Agrawal Bhojanalay',175)">Order
+                                        Now</button>
+                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Paneer%20Do%20Pyaza.jpg"
+                                        class="figure-img img-fluid rounded">
+                                    <figcaption class="figure-caption" id="311">Paneer Do Pyaza</figcaption>
+                                    <figcaption class="figure-caption"><span id="cap312">Agrawal
+                                            Bhojanalay</span><br><span id="cap313">&#8377 175</span></figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-5 col-md-5" id="img22">
+                                <figure class="figure">
+                                    <button class="cart-btn" value="Order Now"
+                                        onclick="show_cart('Mattar Paneer','Taj Family Restaurant',120)">Order
+                                        Now</button>
+                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Mattar%20Paneer.jpg"
+                                        class="figure-img img-fluid rounded">
+                                    <figcaption class="figure-caption" id="321">Mattar Paneer</figcaption>
+                                    <figcaption class="figure-caption"><span id="cap322">Taj Family
+                                            Restaurant</span><br><span id="cap323">&#8377 120</span></figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5 col-md-5" id="img33">
+                                <figure class="figure">
+                                    <button class="cart-btn" value="Order Now"
+                                        onclick="show_cart('Kadai Paneer','Food Hut Restaurant',155)">Order Now</button>
+                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Kadai%20Paneer.jpg"
+                                        class="figure-img img-fluid rounded">
+                                    <figcaption class="figure-caption" id="331">Kadai Paneer</figcaption>
+                                    <figcaption class="figure-caption"><span id="cap332">Food Hut
+                                            Restaurant</span><br><span id="cap333">&#8377 155</span></figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-5 col-md-5" id="img44">
+                                <figure class="figure">
+                                    <button class="cart-btn" value="Order Now"
+                                        onclick="show_cart('Shahi Paneer','Shankar Foods',165)">Order Now</button>
+                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Shahi%20Paneer.jpg"
+                                        class="figure-img img-fluid rounded">
+                                    <figcaption class="figure-caption" id="341">Shahi Paneer</figcaption>
+                                    <figcaption class="figure-caption"><span id="cap342">Shankar Foods</span><br><span
+                                            id="cap343">&#8377 165</span></figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="icecream">
+                        <div class="row">
+                            <div class="col-5 col-md-5" id="img11">
+                                <figure class="figure">
+                                    <button class="cart-btn" value="Order Now"
+                                        onclick="show_cart('Fresh Mango Ice Cream','Baskin Robbins',69)">Order
+                                        Now</button>
+                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Fresh%20Fruit%20Mango%20Ice%20Cream.jpg"
+                                        class="figure-img img-fluid rounded">
+                                    <figcaption class="figure-caption" id="411">Fresh Mango</figcaption>
+                                    <figcaption class="figure-caption"><span id="cap412">Baskin Robbins</span><br><span
+                                            id="cap413">&#8377 69</span></figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-5 col-md-5" id="img22">
+                                <figure class="figure">
+                                    <button class="cart-btn" value="Order Now"
+                                        onclick="show_cart('Fresh Coconut Ice Cream','Baskin Robbins',89)">Order
+                                        Now</button>
+                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Coconut%20Ice%20cream.jpg"
+                                        class="figure-img img-fluid rounded">
+                                    <figcaption class="figure-caption" id="421">Fresh Coconut</figcaption>
+                                    <figcaption class="figure-caption"><span id="cap422">Baskin Robbins</span><br><span
+                                            id="cap423">&#8377 89</span></figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-5 col-md-5" id="img33">
+                                <figure class="figure">
+                                    <button class="cart-btn" value="Order Now"
+                                        onclick="show_cart('Straw Berry Ice cream','Baskin Robbins',69)">Order
+                                        Now</button>
+                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/StrawBerry%20Ice%20cream.jpg"
+                                        class="figure-img img-fluid rounded">
+                                    <figcaption class="figure-caption" id="431">Straw Berry</figcaption>
+                                    <figcaption class="figure-caption"><span id="cap432">Baskin Robbins</span><br><span
+                                            id="cap433">&#8377 69</span></figcaption>
+                                </figure>
+                            </div>
+                            <div class="col-5 col-md-5" id="img44">
+                                <figure class="figure">
+                                    <button class="cart-btn" value="Order Now"
+                                        onclick="show_cart('Kesar Pasta Ice Cream','Baskin Robbins',79)">Order
+                                        Now</button>
+                                    <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/Data%20Images/Kesar%20Pasta%20Ice%20cream.jpg"
+                                        class="figure-img img-fluid rounded">
+                                    <figcaption class="figure-caption" id="441">Kesar Pasta</figcaption>
+                                    <figcaption class="figure-caption"><span id="cap442">Baskin Robbins</span><br><span
+                                            id="cap443">&#8377 79</span></figcaption>
+                                </figure>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-    
-    
-        </section>
+        </div>
+
+
+    </section>
 
     <section class="img1123">
         <div class="container-fluid animatedParent animateOnce" id="pic22">
@@ -1596,8 +1696,8 @@
                             <img src="https://raw.githubusercontent.com/THE-VR7/Food-ordering-web-application/master/images/abc.png"
                                 id="img333">
                         </div>
-                        <div class="col-lg-2 slow animated fadeInDown box delay-1500"> <a href="#img"
-                                class="ord">ORDER NOW</a></div>
+                        <div class="col-lg-2 slow animated fadeInDown box delay-1500"> <a href="#img" class="ord">ORDER
+                                NOW</a></div>
                     </div>
                 </div>
             </div>
@@ -1637,11 +1737,12 @@
             <p style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 20px;">Useful Links</p>
 
             <ul style="list-style: none;">
-                <li><a style="text-decoration: none;" href="/info.html/#section-1">FAQ</a></li>
-                <li><a style="text-decoration: none;" href="/info.html/#section-2">Terms and Condition</a></li>
-                <li><a style="text-decoration: none;" href="/info.html/#section-3">Privacy Policy</a></li>
-                <li><a style="text-decoration: none;" href="/info.html/#section-4">Terms of Use</a></li>
-                <li><a style="text-decoration: none;" href="/info.html/#section-5">Refund Policy</a></li>
+                <li><a style="text-decoration: none;" target="_blank" href="/info/#section-1">FAQ</a></li>
+                <li><a style="text-decoration: none;" target="_blank" href="/info/#section-2">Terms and Condition</a>
+                </li>
+                <li><a style="text-decoration: none;" target="_blank" href="/info/#section-3">Privacy Policy</a></li>
+                <li><a style="text-decoration: none;" target="_blank" href="/info/#section-4">Terms of Use</a></li>
+                <li><a style="text-decoration: none;" target="_blank" href="/info/#section-5">Refund Policy</a></li>
             </ul>
             <p style="color: white; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 20px;" id="fdbk">Give
                 Your Valuable Feedback</p>
@@ -1663,74 +1764,74 @@
     </section>
 
     <section class="feedback" id="feedback1">
-            <div class="container">
-                <h1 class="h1h1">Share your problems with us</h1>
-                <br>
-                <form method="POST" id="feedform" action="/index">
-                    <div class="row">
-                        <div class="col-md-4 col-12 offset-2">
-                            <div class="styled-input">
-                                <input type="text" name="Name" required />
-                                <label>Name</label>
-                            </div>
-                        </div>
-                        <div class="col-md-4 col-12">
-                            <div class="styled-input">
-                                <input type="email" name="email" required />
-                                <label>Email</label>
-                            </div>
-                        </div>
-                    </div> 
-                        <div class="row">
-                        <div class="col-md-7 col-sm-12 offset-3">
-                            <div class="styled-input">
-                                <input type="text" name="phonenumber" required />
-                                <label>Phone Number</label>
-                            </div>
+        <div class="container">
+            <h1 class="h1h1">Share your problems with us</h1>
+            <br>
+            <form method="POST" id="feedform" action="/index">
+                <div class="row">
+                    <div class="col-md-4 col-12 offset-2">
+                        <div class="styled-input">
+                            <input type="text" name="Name" required />
+                            <label>Name</label>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-9 offset-2">
-                            <div class="styled-input">
-                                <textarea name="text" id="textmsg" cols="2" rows="2" placeholder="Enter Your Message here"></textarea>
-                            </div>
+                    <div class="col-md-4 col-12">
+                        <div class="styled-input">
+                            <input type="email" name="email" required />
+                            <label>Email</label>
                         </div>
                     </div>
-                    <div class="row">    
-                        <div class="col-xs-12 col-md-3 offset-5">
-                            <button type="submit"  class="submit-btn">Send message</butto>
+                </div>
+                <div class="row">
+                    <div class="col-md-7 col-sm-12 offset-3">
+                        <div class="styled-input">
+                            <input type="text" name="phonenumber" required />
+                            <label>Phone Number</label>
                         </div>
                     </div>
-                </form>
-            </div>
-        </section>    
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-9 offset-2">
+                        <div class="styled-input">
+                            <textarea name="text" id="textmsg" cols="2" rows="2"
+                                placeholder="Enter Your Message here"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-md-3 offset-5">
+                        <button type="submit" class="submit-btn">Send message</butto>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
     <script>
-        function show_cart(x,y,z){
+        function show_cart(x, y, z) {
             alert("You need to Signup or Login to Order this item")
-            document.getElementById('id01').style.display='block'
+            document.getElementById('id01').style.display = 'block'
             $('#id01').css("width:auto; cursor: pointer;")
         }
-        function disableScroll() { 
+        function disableScroll() {
             // Get the current page scroll position 
-            scrollTop =  
-              window.pageYOffset || document.documentElement.scrollTop; 
-            scrollLeft =  
-              window.pageXOffset || document.documentElement.scrollLeft, 
-  
+            scrollTop =
+                window.pageYOffset || document.documentElement.scrollTop;
+            scrollLeft =
+                window.pageXOffset || document.documentElement.scrollLeft,
+
                 // if any scroll is attempted, 
                 // set this to the previous value 
-                window.onscroll = function() { 
-                    window.scrollTo(scrollLeft, scrollTop); 
-                }; 
-        } 
-        function enableScroll() { 
-            window.onscroll = function() {}; 
-        } 
-        function show_feedback()
-        {
+                window.onscroll = function () {
+                    window.scrollTo(scrollLeft, scrollTop);
+                };
+        }
+        function enableScroll() {
+            window.onscroll = function () { };
+        }
+        function show_feedback() {
             document.getElementById("html2").style.scrollBehavior = "unset";
             document.getElementById("feedback1").style.display = "block";
-            location.href='#feedform';
+            location.href = '#feedform';
             document.getElementById("navbar11").style.display = "none";
             disableScroll();
         }
@@ -1812,4 +1913,5 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 </body>
+
 </html>

@@ -1589,10 +1589,10 @@
                 <div class="col-md-4">
                     <p id="lb3" style="font-weight: bold;">Quantity of Food Item :- </p>
                 </div>
-                <div class="col-md-4">
-                    <input id="quant" type="number" name="quantity" min="1" max="20" step="1" value="1"
-                        style="border: 0;">
-                    <i id="icon223" class="fa fa-check-square tick" onclick="call_quant()" aria-hidden="true"></i>
+                <div class="col-md-4" style="float: inline;display: inline-flex;">
+                    <div class="fa fa-minus-square-o" onclick="cart_reduce()" aria-hidden="true" style="padding-left: 3px;padding-right: 3px; padding-top: 5px;" > </div>
+                    <div id="quant">1</div>
+                    <div id="icon223" class="fa fa-plus-square-o" onclick="cart_increase()" aria-hidden="true" style="padding-left: 3px; padding-top: 5px;"> </div>
                 </div>
             </div>
 
@@ -1651,11 +1651,22 @@
             totprice = totprice + z;
             document.getElementById("price1").innerHTML = totprice;
         }
-        function call_quant() {
-            var quant = document.getElementById("quant").value;
+        function cart_reduce(){
             var z2 = parseInt(document.getElementById("lb33").textContent, 10);
-            totprice = totprice + z2 * quant - z2;
-            document.getElementById("price1").innerHTML = totprice;
+            var quan = Number(document.getElementById('quant').innerHTML)
+            if(quan == 0){
+                alert("Cannot reduce more")
+            }
+            else{
+                totprice = totprice - z2
+                document.getElementById('quant').innerHTML= quan-1
+            }
+        }
+        function cart_increase(){
+            var z2 = parseInt(document.getElementById("lb33").textContent, 10);
+            totprice = totprice + z2
+            var quan = Number(document.getElementById('quant').innerHTML)
+            document.getElementById('quant').innerHTML= quan + 1
         }
         function cancel_item() {
             var z1 = parseInt(document.getElementById("lb33").textContent, 10);
@@ -1676,10 +1687,17 @@
         }
 
         function show_feedback() {
-            document.getElementById("html2").style.scrollBehavior = "unset";
+            document.getElementById("html2").style.scrollBehavior = "smooth";
             document.getElementById("feedback1").style.display = "block";
             location.href = '#feedform';
             document.getElementById("navbar").style.display = "none";
+            disableScroll();
+        }
+        function hide_feedback() {
+            document.getElementById("html2").style.scrollBehavior = "";
+            document.getElementById("feedback1").style.display = "none";
+            location.href = '#navbar';
+            document.getElementById("navbar").style.display = "content";
             disableScroll();
         }
         function show_pizza() {
